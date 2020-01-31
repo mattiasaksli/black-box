@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
     public bool isInputAvailable = true;
     public float MoveSpeed = 5;
     public Rigidbody2D PlayerController;
-    public float raycastDistance = 1;
+    public float raycastDistance = 0.05f;
     private float colliderOffset = 3.2f;
 
     void Start()

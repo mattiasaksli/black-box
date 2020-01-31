@@ -99,7 +99,7 @@ MonoBehaviour:
   isInputAvailable: 1
   MoveSpeed: 5
   PlayerController: {fileID: 3354355000167241255}
-  raycastDistance: 1
+  raycastDistance: 0.05
 --- !u!50 &3354355000167241255
 Rigidbody2D:
   serializedVersion: 4
