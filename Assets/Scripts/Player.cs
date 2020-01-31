@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
     public float MoveSpeed = 5;
     public Rigidbody2D PlayerController;
     public float raycastDistance = 0.05f;
+    public float horizontalDirection;
+
     private float colliderOffset = 3.2f;
 
     void Start()
@@ -17,30 +19,28 @@ public class Player : MonoBehaviour
     {
         if (isInputAvailable)
         {
-            float horizontalDirection = Input.GetAxis("Horizontal");
+            horizontalDirection = Input.GetAxis("Horizontal");
+        }
+    }
 
-            if (horizontalDirection != 0)
-            {
-                float sideOffset = colliderOffset * (horizontalDirection < 0 ? -1 : 1);
+    private void FixedUpdate()
+    {
+        float sideOffset = colliderOffset * (horizontalDirection < 0 ? -1 : 1);
 
-                Vector2 origin = new Vector2(transform.position.x + sideOffset, transform.position.y);
-                Vector2 dir = new Vector2(horizontalDirection < 0 ? -1 : 1, 0);
+        Vector2 origin = new Vector2(transform.position.x + sideOffset, transform.position.y);
+        Vector2 dir = new Vector2(horizontalDirection < 0 ? -1 : 1, 0);
 
-                Debug.DrawRay(origin, dir * raycastDistance);
+        Debug.DrawRay(origin, dir * raycastDistance);
 
-                RaycastHit2D hit = Physics2D.Raycast(origin, dir, raycastDistance, LayerMask.GetMask("Default"));
-                if (hit.collider == null)
-                {
-                    gameObject.transform.position += (new Vector3(horizontalDirection, 0, 0) * MoveSpeed * Time.deltaTime);
-                }
+        RaycastHit2D hit = Physics2D.Raycast(origin, dir, raycastDistance, LayerMask.GetMask("Default"));
+        if (hit.collider == null)
+        {
+            gameObject.transform.position += (new Vector3(horizontalDirection, 0, 0) * MoveSpeed * Time.deltaTime);
+        }
 
-                else if (hit.collider.tag != "Level")
-                {
-                    gameObject.transform.position += (new Vector3(horizontalDirection, 0, 0) * MoveSpeed * Time.deltaTime);
-                }
-            }
-
-
+        else if (hit.collider.tag != "Level")
+        {
+            gameObject.transform.position += (new Vector3(horizontalDirection, 0, 0) * MoveSpeed * Time.deltaTime);
         }
     }
 }
