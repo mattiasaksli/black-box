@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Doozy.Engine.UI;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -7,11 +10,13 @@ public class Player : MonoBehaviour
     public Rigidbody2D PlayerController;
     public float raycastDistance = 0.05f;
     public float horizontalDirection;
+    public UIView transitionView;
 
     private float colliderOffset = 3.2f;
 
     void Start()
     {
+        transitionView.Hide();
         colliderOffset = gameObject.GetComponent<BoxCollider2D>().size.x / 2;
     }
 
@@ -44,13 +49,31 @@ public class Player : MonoBehaviour
         }
     }
 
+
+
+    //Death states
     public void PressureFailure()
     {
-
+        StartCoroutine(PressureRoutine());
     }
-
     public void PowerFailure()
     {
+        StartCoroutine(PowerRoutine());
+    }
 
+    IEnumerator PressureRoutine()
+    {
+        transitionView.Show();
+        //Play sound & clear progress
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Start");
+    }
+
+    IEnumerator PowerRoutine()
+    {
+        transitionView.Show();
+        //Play sound & clear progress
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Start");
     }
 }

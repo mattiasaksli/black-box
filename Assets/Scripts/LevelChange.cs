@@ -14,7 +14,6 @@ public class LevelChange : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        transitionView.Hide();
     }
 
     void Update()
