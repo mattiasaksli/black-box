@@ -6,9 +6,16 @@ public class LightsOutController : MonoBehaviour
 {
     public LightsOutButton[] buttons = new LightsOutButton[9];
     public GameObject player;
+    public SaveState save;
+    public AudioSource src;
+    public AudioClip working;
+    public AudioClip faulty;
+    public DisplayTrigger DP;
+    public Status ST;
 
     void Start()
     {
+        save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
         buttons = GetComponentsInChildren<LightsOutButton>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -47,6 +54,11 @@ public class LightsOutController : MonoBehaviour
     private IEnumerator GameWon()
     {
         yield return new WaitForSeconds(1f);
+        save.changeFlag("engine");
+        src.clip = working;
+        src.Play();
+        ST.enabled = false;
+        DP.enabled = true;
         // Save state and play sounds
     }
 }

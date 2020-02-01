@@ -24,7 +24,7 @@ public class LevelChange : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.transform.position) < activationDistance)
         {
-            if (key != "")
+            if (!key.Equals(""))
             {
                 if (!save.flags[key])
                 {

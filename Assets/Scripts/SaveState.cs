@@ -11,7 +11,7 @@ public class SaveState : MonoBehaviour
 
     public static bool created;
 
-    void Start()
+    void Awake()
     {
         if (created)
         {
