@@ -11,6 +11,11 @@ public class DisplayTrigger : MonoBehaviour
     [TextArea(3, 10)]
     public string[] sentences;
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Update()
     {
         if (Vector3.Distance(transform.position, player.transform.position) < activationDistance && !playerDisplay.inDialogue)

@@ -10,13 +10,13 @@ public class LevelChange : MonoBehaviour
     public int sceneToLoad;
     public GameObject player;
     public float activationDistance;
-    // Start is called before the first frame update
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         transitionView.Hide();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Vector3.Distance(transform.position, player.transform.position) < activationDistance)

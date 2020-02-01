@@ -8,6 +8,11 @@ public class Status : MonoBehaviour
     public GameObject player;
     public float activationDistance;
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Update()
     {
         if (Vector3.Distance(transform.position, player.transform.position) < activationDistance)
