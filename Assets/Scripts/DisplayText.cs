@@ -12,8 +12,16 @@ public class DisplayText : MonoBehaviour
     public TMP_Text text;
     public bool inDialogue = false;
 
+    public AudioSource src;
+
+    void Start()
+    {
+        src = GetComponent<AudioSource>();
+    }
+
     public void StartDisplay()
     {
+        this.GetComponent<Player>().isInputAvailable = false;
         inDialogue = true;
         textView.Show();
         sentence = 0;
@@ -34,6 +42,7 @@ public class DisplayText : MonoBehaviour
         }
         else
         {
+            this.GetComponent<Player>().isInputAvailable = true;
             text.text = "";
             sentence = 0;
             inDialogue = false;
@@ -44,6 +53,7 @@ public class DisplayText : MonoBehaviour
     IEnumerator ScrollText()
     {
         scrolling = true;
+        src.Play();
         string displayText = "";
         foreach (char character in sentences[sentence])
         {
@@ -58,5 +68,6 @@ public class DisplayText : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         scrolling = false;
+        src.Stop();
     }
 }

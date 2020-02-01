@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void PlayStep()
+    public void PlayStep()
     {
         foreach (AudioSource sc in sources)
         {
@@ -61,7 +61,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void PlaySound(AudioClip clip, float volume)
+    public void PlaySound(AudioClip clip, float volume)
     {
         foreach (AudioSource sc in sources)
         {

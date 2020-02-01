@@ -6,9 +6,9 @@ public class DisplayTrigger : MonoBehaviour
     public DisplayText playerDisplay;
     public UIView label;
     public GameObject player;
+    public SaveState save;
     public float activationDistance;
     public string key;
-    public SaveState save;
     public bool status = false;
 
     [TextArea(3, 10)]
@@ -23,7 +23,7 @@ public class DisplayTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < activationDistance && !playerDisplay.inDialogue)
+        if (Vector3.Distance(transform.position, player.transform.position) < activationDistance && player.GetComponent<Player>().isInputAvailable)
         {
             if (!key.Equals(""))
             {

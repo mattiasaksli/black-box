@@ -8,6 +8,7 @@ public class LightsOutController : MonoBehaviour
     public GameObject player;
     public SaveState save;
     public AudioSource src;
+    public AudioSource buttonSrc;
     public AudioClip working;
     public AudioClip faulty;
     public DisplayTrigger DP;
@@ -57,6 +58,7 @@ public class LightsOutController : MonoBehaviour
         save.changeFlag("engine");
         src.clip = working;
         src.Play();
+        player.GetComponent<Player>().isInputAvailable = true;
         ST.enabled = false;
         DP.enabled = true;
         // Save state and play sounds

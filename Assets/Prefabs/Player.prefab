@@ -138,7 +138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b6ca2d8545e4764a92fb94014a3ecf0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18c10af8cecebda4c96e724f333c8c29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1084,11 +1084,12 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: Example Clicks
-        SoundName: Clack
-        AudioClip: {fileID: 0}
-        OutputAudioMixerGroup: {fileID: 0}
+        SoundName: 
+        AudioClip: {fileID: 8300000, guid: be933b9fd0c70d643ba10e41ce5fe776, type: 3}
+        OutputAudioMixerGroup: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce,
+          type: 2}
     PresetCategory: Uncategorized
     PresetName: Default
     PunchAnimation:
@@ -3837,6 +3838,7 @@ GameObject:
   - component: {fileID: 389816595963648276}
   - component: {fileID: 389816595963648277}
   - component: {fileID: 389816595963648278}
+  - component: {fileID: 275934769288745589}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3879,6 +3881,7 @@ MonoBehaviour:
   scrolling: 0
   text: {fileID: 389816595016238963}
   inDialogue: 0
+  src: {fileID: 0}
 --- !u!114 &389816595963648276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3947,6 +3950,103 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!82 &275934769288745589
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389816595963648274}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 845f79bada0426c4093248d054143915, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6242447202622374885
 GameObject:
   m_ObjectHideFlags: 0
@@ -3958,6 +4058,7 @@ GameObject:
   - component: {fileID: 6242447202622374884}
   - component: {fileID: 6242447202622374886}
   - component: {fileID: 6242447202622374887}
+  - component: {fileID: 8269911107451504866}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -4049,3 +4150,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8269911107451504866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242447202622374885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6211b5a48a98e9049b88d6d900057d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

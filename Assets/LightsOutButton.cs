@@ -9,6 +9,7 @@ public class LightsOutButton : MonoBehaviour
     public Color offColor = new Color(0.9f, 0, 0);
     public Color onColor = new Color(0, 0, 0.9f);
     public Button b;
+    public AudioSource src;
 
     void Start()
     {
@@ -57,6 +58,8 @@ public class LightsOutButton : MonoBehaviour
     {
         isOn = !isOn;
         ChangeColor();
+
+        src.Play();
 
         foreach (LightsOutButton button in neighbors)
         {
