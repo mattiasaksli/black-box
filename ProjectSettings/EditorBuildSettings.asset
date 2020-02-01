@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start 1.unity
     guid: a5dac278bd5dd9a44bbe330b0093e09e
+  - enabled: 1
+    path: Assets/Scenes/PowerRoom.unity
+    guid: f944c5685d875764fbe76ba36c45bc42
   m_configObjects: {}

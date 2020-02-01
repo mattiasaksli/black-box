@@ -234,6 +234,8 @@ MonoBehaviour:
   sceneToLoad: 1
   player: {fileID: 0}
   activationDistance: 2
+  save: {fileID: 0}
+  key: 
 --- !u!1 &9209240337126883184
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +348,7 @@ MonoBehaviour:
   AutoHideAfterShow: 0
   AutoHideAfterShowDelay: 3
   AutoSelectButtonAfterShow: 0
-  BehaviorAtStart: 0
+  BehaviorAtStart: 1
   CustomStartAnchoredPosition: {x: 0, y: 0, z: 0}
   DeselectAnyButtonSelectedOnHide: 0
   DeselectAnyButtonSelectedOnShow: 0

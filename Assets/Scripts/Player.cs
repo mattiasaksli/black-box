@@ -1,21 +1,27 @@
 ﻿using Doozy.Engine.UI;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public Animator anim;
+    public Rigidbody2D PlayerController;
+    public UIView transitionView;
+    public GameObject sprite;
+    public Light2D flashlight;
     public bool isInputAvailable = true;
     public float MoveSpeed = 5;
-    public Rigidbody2D PlayerController;
     public float raycastDistance = 0.05f;
     public float horizontalDirection;
-    public UIView transitionView;
 
     private float colliderOffset = 3.2f;
 
     void Start()
     {
+        flashlight = GetComponentsInChildren<Light2D>()[1];
+        anim = GetComponentInChildren<Animator>();
         transitionView = GameObject.Find("View - Transition").GetComponent<UIView>();
         transitionView.Hide();
         colliderOffset = gameObject.GetComponent<BoxCollider2D>().size.x / 2;
@@ -26,6 +32,24 @@ public class Player : MonoBehaviour
         if (isInputAvailable)
         {
             horizontalDirection = Input.GetAxis("Horizontal");
+            if (horizontalDirection != 0)
+            {
+                flashlight.enabled = true;
+                if (horizontalDirection > 0)
+                {
+                    sprite.transform.localScale = new Vector3(3, 3, 1);
+                }
+                else
+                {
+                    sprite.transform.localScale = new Vector3(-3, 3, 1);
+                }
+                anim.SetBool("Walk", true);
+            }
+            else
+            {
+                anim.SetBool("Walk", false);
+                flashlight.enabled = false;
+            }
         }
     }
 

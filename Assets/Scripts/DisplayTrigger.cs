@@ -9,6 +9,7 @@ public class DisplayTrigger : MonoBehaviour
     public float activationDistance;
     public string key;
     public SaveState save;
+    public bool status = false;
 
     [TextArea(3, 10)]
     public string[] sentences;
@@ -17,6 +18,7 @@ public class DisplayTrigger : MonoBehaviour
     {
         save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
         player = GameObject.FindGameObjectWithTag("Player");
+        playerDisplay = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<DisplayText>();
     }
 
     void Update()
@@ -25,7 +27,11 @@ public class DisplayTrigger : MonoBehaviour
         {
             if (!key.Equals(""))
             {
-                if (save.flags[key])
+                if (save.flags[key] && !status)
+                {
+                    this.enabled = false;
+                }
+                else if (!save.flags[key] && status)
                 {
                     this.enabled = false;
                 }
