@@ -3,8 +3,13 @@ using UnityEngine;
 
 public class SaveState : MonoBehaviour
 {
-    public Dictionary<string, bool> flags;
-    private static bool created;
+    public Dictionary<string, bool> flags = new Dictionary<string, bool>();
+
+    public bool valve;
+    public bool engine;
+    public bool pipes;
+
+    public static bool created;
 
     void Start()
     {
@@ -12,12 +17,12 @@ public class SaveState : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        else
-        {
-            flags.Add("valve", false);
-            flags.Add("engine", false);
-            flags.Add("pipes", false);
-        }
+        DontDestroyOnLoad(this.gameObject);
+        created = true;
+
+        flags.Add("valve", valve);
+        flags.Add("engine", engine);
+        flags.Add("pipes", pipes);
     }
 
     public void Clear()
@@ -30,11 +35,6 @@ public class SaveState : MonoBehaviour
 
     public void changeFlag(string key)
     {
-        if (flags[key])
-        {
-            flags[key] = false;
-            return;
-        }
         flags[key] = true;
     }
 }
