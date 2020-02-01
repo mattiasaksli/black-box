@@ -23,6 +23,7 @@ public class LightsOutController : MonoBehaviour
             currentlyAllOn = currentlyAllOn && b.isOn;
         }
 
+        //Win
         if (currentlyAllOn)
         {
             GameEventMessage.SendEvent("LightsOutWon");
@@ -35,6 +36,7 @@ public class LightsOutController : MonoBehaviour
             currentlyAllOff = currentlyAllOff && !b.isOn;
         }
 
+        //Lose
         if (currentlyAllOff)
         {
             player.GetComponent<Player>().PowerFailure();
