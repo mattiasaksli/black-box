@@ -16,17 +16,22 @@ public class LightsOutButton : MonoBehaviour
 
         b.onClick.AddListener(() => ChangeStatus());
 
+        ChangeColor();
+    }
+
+    private void ChangeColor()
+    {
         if (isOn)
         {
             ColorBlock colors = b.colors;
             colors.normalColor = onColor;
 
             Color highlightedcolor = onColor;
-            highlightedcolor.b = 0.8f;
+            highlightedcolor.g = 0.5f;
             colors.highlightedColor = highlightedcolor;
 
             Color pressedColor = onColor;
-            pressedColor.b = 0.7f;
+            pressedColor.g = 0.4f;
             colors.pressedColor = pressedColor;
 
             colors.selectedColor = onColor;
@@ -38,13 +43,9 @@ public class LightsOutButton : MonoBehaviour
             ColorBlock colors = b.colors;
             colors.normalColor = offColor;
 
-            Color highlightedcolor = offColor;
-            highlightedcolor.r = 0.8f;
-            colors.highlightedColor = highlightedcolor;
+            colors.highlightedColor = new Color(0.5f, 0.5f, 0.5f);
 
-            Color pressedColor = offColor;
-            pressedColor.r = 0.7f;
-            colors.pressedColor = pressedColor;
+            colors.pressedColor = new Color(0.4f, 0.4f, 0.4f);
 
             colors.selectedColor = offColor;
 
@@ -55,79 +56,13 @@ public class LightsOutButton : MonoBehaviour
     public void ChangeStatus()
     {
         isOn = !isOn;
-        if (isOn)
-        {
-            ColorBlock colors = b.colors;
-            colors.normalColor = onColor;
-
-            Color highlightedcolor = onColor;
-            highlightedcolor.b = 0.8f;
-            colors.highlightedColor = highlightedcolor;
-
-            Color pressedColor = onColor;
-            pressedColor.b = 0.7f;
-            colors.pressedColor = pressedColor;
-
-            colors.selectedColor = onColor;
-
-            b.colors = colors;
-        }
-        else
-        {
-            ColorBlock colors = b.colors;
-            colors.normalColor = offColor;
-
-            Color highlightedcolor = offColor;
-            highlightedcolor.r = 0.8f;
-            colors.highlightedColor = highlightedcolor;
-
-            Color pressedColor = offColor;
-            pressedColor.r = 0.7f;
-            colors.pressedColor = pressedColor;
-
-            colors.selectedColor = offColor;
-
-            b.colors = colors;
-        }
+        ChangeColor();
 
         foreach (LightsOutButton button in neighbors)
         {
             button.isOn = !button.isOn;
 
-            if (button.isOn)
-            {
-                ColorBlock colors = button.b.colors;
-                colors.normalColor = onColor;
-
-                Color highlightedcolor = onColor;
-                highlightedcolor.b = 0.8f;
-                colors.highlightedColor = highlightedcolor;
-
-                Color pressedColor = onColor;
-                pressedColor.b = 0.7f;
-                colors.pressedColor = pressedColor;
-
-                colors.selectedColor = onColor;
-
-                button.b.colors = colors;
-            }
-            else
-            {
-                ColorBlock colors = button.b.colors;
-                colors.normalColor = offColor;
-
-                Color highlightedcolor = offColor;
-                highlightedcolor.r = 0.8f;
-                colors.highlightedColor = highlightedcolor;
-
-                Color pressedColor = offColor;
-                pressedColor.r = 0.7f;
-                colors.pressedColor = pressedColor;
-
-                colors.selectedColor = offColor;
-
-                button.b.colors = colors;
-            }
+            button.ChangeColor();
         }
     }
 }

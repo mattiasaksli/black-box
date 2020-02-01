@@ -492,8 +492,8 @@ MonoBehaviour:
   - {fileID: 728792480}
   - {fileID: 741800721}
   isOn: 0
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &453811141
 MonoBehaviour:
@@ -708,8 +708,8 @@ MonoBehaviour:
   - {fileID: 882016999}
   - {fileID: 453811140}
   isOn: 0
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &557913066
 MonoBehaviour:
@@ -1485,8 +1485,8 @@ MonoBehaviour:
   - {fileID: 453811140}
   - {fileID: 929021025}
   isOn: 1
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &728792481
 MonoBehaviour:
@@ -1622,8 +1622,8 @@ MonoBehaviour:
   - {fileID: 929021025}
   - {fileID: 453811140}
   isOn: 1
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &741800722
 MonoBehaviour:
@@ -1760,8 +1760,8 @@ MonoBehaviour:
   - {fileID: 557913065}
   - {fileID: 728792480}
   isOn: 0
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &882017000
 MonoBehaviour:
@@ -1898,8 +1898,8 @@ MonoBehaviour:
   - {fileID: 728792480}
   - {fileID: 741800721}
   isOn: 0
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &929021026
 MonoBehaviour:
@@ -2035,8 +2035,8 @@ MonoBehaviour:
   - {fileID: 882016999}
   - {fileID: 1592512945}
   isOn: 0
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &1009769244
 MonoBehaviour:
@@ -2172,8 +2172,8 @@ MonoBehaviour:
   - {fileID: 1592512945}
   - {fileID: 929021025}
   isOn: 0
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &1321901445
 MonoBehaviour:
@@ -2310,8 +2310,8 @@ MonoBehaviour:
   - {fileID: 728792480}
   - {fileID: 1321901444}
   isOn: 1
-  offColor: {r: 0.9, g: 0, b: 0, a: 1}
-  onColor: {r: 0, g: 0, b: 0.9019608, a: 1}
+  offColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  onColor: {r: 0, g: 0.6, b: 0, a: 1}
   b: {fileID: 0}
 --- !u!114 &1592512946
 MonoBehaviour:
