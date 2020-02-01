@@ -30,3 +30,5 @@ MonoBehaviour:
   - NeutralEnd
   - BadEnd
   - GameEnd
+  - Exposition
+  - Controls
