@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: c6787fa691a18e84fb1d523e6df17cde, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 60d625a0c9f6b0f40a5e9cbbf2a76437, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -141,12 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d256c0c2eea98f468e029a7a35e88a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepVolume: 0
+  footstepVolume: 0.415
   output: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce, type: 2}
   stepSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 42c8b3381e565c149b3d453f3fab1b84, type: 3}
+  - {fileID: 8300000, guid: fee95a95b13591a499c53e93891918e5, type: 3}
+  - {fileID: 8300000, guid: f5ea2b99886fe8b4fac9964524895e4f, type: 3}
+  - {fileID: 8300000, guid: 572f6025ed29de9488d51b34be91c623, type: 3}
+  - {fileID: 8300000, guid: 9b37be8f25fa43843a1d44ce29a9b036, type: 3}
   sources: []

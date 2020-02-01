@@ -7,10 +7,9 @@ public class Status : MonoBehaviour
     public UIView label;
     public UIView status;
     public GameObject player;
-    public float activationDistance;
     public SaveState save;
+    public float activationDistance;
     public string key;
-    DisplayTrigger DP;
 
     void Start()
     {
@@ -20,7 +19,7 @@ public class Status : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < activationDistance)
+        if (Vector3.Distance(transform.position, player.transform.position) < activationDistance && player.GetComponent<Player>().isInputAvailable)
         {
             if (!key.Equals(""))
             {
@@ -33,6 +32,7 @@ public class Status : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 GameEventMessage.SendEvent("Interacting");
+                player.GetComponent<Player>().isInputAvailable = false;
                 label.Hide();
             }
         }
