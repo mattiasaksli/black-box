@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d256c0c2eea98f468e029a7a35e88a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepVolume: 0.415
+  footstepVolume: 0.256
   output: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce, type: 2}
   stepSounds:
   - {fileID: 8300000, guid: 42c8b3381e565c149b3d453f3fab1b84, type: 3}
