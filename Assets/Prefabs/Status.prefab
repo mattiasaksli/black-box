@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 4444639691410950045}
-  status: {fileID: 0}
+  status: {fileID: 4444639691410950045}
   player: {fileID: 0}
   activationDistance: 2
 --- !u!1 &4444639691410950046
