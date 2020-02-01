@@ -10,6 +10,8 @@ public class ChooseAudio : MonoBehaviour
     public Status ST;
     public string key = "engine";
 
+    public bool broken = true;
+
     void Start()
     {
         save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
@@ -26,9 +28,11 @@ public class ChooseAudio : MonoBehaviour
             src.clip = working;
             ST.enabled = false;
             DP.enabled = true;
+            broken = false;
         }
         else
         {
+            broken = true;
             ST.enabled = true;
             DP.enabled = false;
             src.clip = faulty;

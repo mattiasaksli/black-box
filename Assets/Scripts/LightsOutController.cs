@@ -50,10 +50,9 @@ public class LightsOutController : MonoBehaviour
 
     private IEnumerator GameWon()
     {
+        chooser.Choose();
         yield return new WaitForSeconds(1f);
         save.changeFlag("engine");
-        chooser.Choose();
         player.GetComponent<Player>().isInputAvailable = true;
-        // Save state and play sounds
     }
 }
