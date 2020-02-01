@@ -101,7 +101,7 @@ MonoBehaviour:
   m_version: 1
   m_description: 
   m_id: 6aaf1b34-431d-4ab9-9d39-1445b4888684
-  m_lastModified: 132250233348657557
+  m_lastModified: 132250279727476587
 --- !u!114 &358101817143488425
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,80 +199,6 @@ MonoBehaviour:
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews: []
---- !u!114 &4280355423028610933
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97aebf4d1c7c46d9843e5c78fd464d44, type: 3}
-  m_Name: GameEventNode
-  m_EditorClassIdentifier: 
-  ErrorNodeNameIsEmpty: 0
-  ErrorDuplicateNameFoundInGraph: 0
-  m_inputSockets:
-  - m_connectionMode: 1
-    m_connections: []
-    m_connectionPoints:
-    - {x: -2, y: 4}
-    - {x: 202, y: 4}
-    m_direction: 0
-    m_canBeDeleted: 0
-    m_canBeReordered: 0
-    m_curveModifier: 0
-    m_height: 24
-    m_width: 216
-    m_x: 0
-    m_y: 38
-    m_id: 2aa815d8-135e-4849-8291-c522c8247348
-    m_nodeId: 46519e5a-ea02-457d-b845-6c590f82a5a4
-    m_socketName: InputSocket_0
-    m_value: '{}'
-    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_outputSockets:
-  - m_connectionMode: 0
-    m_connections: []
-    m_connectionPoints:
-    - {x: -2, y: 4}
-    - {x: 202, y: 4}
-    m_direction: 1
-    m_canBeDeleted: 0
-    m_canBeReordered: 0
-    m_curveModifier: 0
-    m_height: 24
-    m_width: 216
-    m_x: 0
-    m_y: 62
-    m_id: aca5ab0f-e429-43e1-950e-4bf95571a748
-    m_nodeId: 46519e5a-ea02-457d-b845-6c590f82a5a4
-    m_socketName: OutputSocket_0
-    m_value: '{}'
-    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_nodeType: 4
-  m_allowDuplicateNodeName: 0
-  m_allowEmptyNodeName: 0
-  m_canBeDeleted: 1
-  m_debugMode: 0
-  m_useFixedUpdate: 0
-  m_useLateUpdate: 0
-  m_useUpdate: 0
-  m_height: 156
-  m_width: 216
-  m_x: 162.83331
-  m_y: -18.166647
-  m_minimumInputSocketsCount: 1
-  m_minimumOutputSocketsCount: 1
-  m_graphId: 6aaf1b34-431d-4ab9-9d39-1445b4888684
-  m_id: 46519e5a-ea02-457d-b845-6c590f82a5a4
-  m_name: Send Game Events
-  m_notes: 
-  ErrorNotSendingAnyGameEvent: 1
-  GameEvent: 
 --- !u!114 &4710763158715362113
 MonoBehaviour:
   m_ObjectHideFlags: 1

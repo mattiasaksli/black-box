@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4444639691311313501}
   - component: {fileID: 4444639691311313502}
   m_Layer: 0
-  m_Name: Status
+  m_Name: Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
