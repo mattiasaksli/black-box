@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 693474646}
   - component: {fileID: 693474645}
   m_Layer: 0
-  m_Name: AirlockDoor
+  m_Name: BackupDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   player: {fileID: 1424307473}
   save: {fileID: 0}
   AM: {fileID: 0}
-  sceneToLoad: PressureRoom
+  sceneToLoad: PowerRoom
   activationDistance: 2
   key: 
   useVolume: 1
@@ -430,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 7007544398188328050, guid: 33a603bc5748f7c4f901222b7601a47b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.973
+      value: 18.37
       objectReference: {fileID: 0}
     - target: {fileID: 7007544398188328050, guid: 33a603bc5748f7c4f901222b7601a47b,
         type: 3}
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Base Access
+  m_text: Core Access
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 951dcce1ba6c0ae4aa97e0482ce52aee, type: 2}
   m_sharedMaterial: {fileID: -4975469805524644257, guid: 951dcce1ba6c0ae4aa97e0482ce52aee,
@@ -1893,7 +1893,7 @@ PrefabInstance:
     - target: {fileID: 7007544398188328050, guid: 33a603bc5748f7c4f901222b7601a47b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.463
+      value: -12.96
       objectReference: {fileID: 0}
     - target: {fileID: 7007544398188328050, guid: 33a603bc5748f7c4f901222b7601a47b,
         type: 3}
@@ -2090,7 +2090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 24}
+  m_AnchoredPosition: {x: 0, y: 36}
   m_SizeDelta: {x: 1118, y: 629}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1574554136
@@ -2111,9 +2111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Airlock
-
-    Maintenence'
+  m_text: "Backup \nSystems"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 951dcce1ba6c0ae4aa97e0482ce52aee, type: 2}
   m_sharedMaterial: {fileID: -4975469805524644257, guid: 951dcce1ba6c0ae4aa97e0482ce52aee,
@@ -2183,9 +2181,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1574554136}
-    characterCount: 19
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 1
+    spaceCount: 2
     wordCount: 2
     linkCount: 0
     lineCount: 2
@@ -3009,7 +3007,7 @@ MonoBehaviour:
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
   ViewCategory: Custom
-  ViewName: Text
+  ViewName: Core
 --- !u!114 &1648144623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3178,7 +3176,7 @@ GameObject:
   - component: {fileID: 1815974395}
   - component: {fileID: 1815974394}
   m_Layer: 0
-  m_Name: Canvas - Text
+  m_Name: Canvas - Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3221,7 +3219,7 @@ MonoBehaviour:
   StartRotation: {x: 0, y: 0, z: 0}
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
-  CanvasName: Text
+  CanvasName: Core
   CustomCanvasName: 1
   DontDestroyCanvasOnLoad: 0
 --- !u!114 &1815974395
@@ -3302,7 +3300,7 @@ GameObject:
   - component: {fileID: 1884796134}
   - component: {fileID: 1884796138}
   m_Layer: 0
-  m_Name: BaseHatch
+  m_Name: CoreHatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3325,12 +3323,13 @@ MonoBehaviour:
   player: {fileID: 1424307473}
   save: {fileID: 0}
   activationDistance: 2
-  key: valve
+  key: pipes
   status: 0
   sentences:
-  - The hatch is locked
-  - The display reads "Airlock pressure too high"
-  - I need to relieve the air pressure difference somehow...
+  - 'The hatch is locked, the display reads:'
+  - '"Restore sufficient backup power and...'
+  - ...Relieve life support system pressure differences"
+  - I wonder what's down there...?
 --- !u!4 &1884796137
 Transform:
   m_ObjectHideFlags: 0
@@ -3364,9 +3363,9 @@ MonoBehaviour:
   player: {fileID: 0}
   save: {fileID: 0}
   AM: {fileID: 0}
-  sceneToLoad: Base
+  sceneToLoad: Core
   activationDistance: 2
-  key: valve
+  key: pipes
   useVolume: 1
   useSound: {fileID: 8300000, guid: de26be2a9776eb74ab048cf46faaf8ed, type: 3}
 --- !u!114 &1982482473 stripped
@@ -4604,6 +4603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3411283566070015484}
   - component: {fileID: 3411283566070015485}
+  - component: {fileID: 3411283566070015474}
   - component: {fileID: 3411283566070015475}
   m_Layer: 0
   m_Name: Note
@@ -4612,6 +4612,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3411283566070015474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3411283566070015472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37, y: 2.56, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3411283566070015475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4632,13 +4645,13 @@ MonoBehaviour:
   key: 
   status: 0
   sentences:
-  - '"I''m leaving this godforsaken place...'
-  - ...I did as much damage as I could with what little time I had...
-  - ...they're rounding up the engineers to fix what I did...
-  - ...if you have any heart at all, don't obey their commands...
-  - ...the life of one is a small price to pay...
-  - ...I'm sorry to be asking this of you."
-  - Chris Aldsworth, Cheif of Operations
+  - '"In the case of a major power outage...'
+  - ...head towards your closest escape shuttle...
+  - ...do not attempt to rescue or help any of the workers inside...
+  - ...notify Feyton Industries Headquarters as soon as possible...
+  - ...all personel past this checkpoint are required...
+  - ...to have their firearm and personal cyanide pill at all times."
+  - Warning sign, R-Sector
 --- !u!4 &3411283566070015484
 Transform:
   m_ObjectHideFlags: 0
@@ -4693,7 +4706,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba48ac9f39b2c85428d1c3fc719e4c8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5dcfb9d0c90e2d34183fcb71e606aca5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4730,7 +4743,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Note
+  m_text: Sign
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 951dcce1ba6c0ae4aa97e0482ce52aee, type: 2}
   m_sharedMaterial: {fileID: -4975469805524644257, guid: 951dcce1ba6c0ae4aa97e0482ce52aee,
@@ -4875,7 +4888,7 @@ PrefabInstance:
     - target: {fileID: 389816595963648273, guid: a312b8063ea31a5488d24953e69963b5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 389816595963648273, guid: a312b8063ea31a5488d24953e69963b5,
         type: 3}

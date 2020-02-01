@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             created = true;
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 7; i++)
             {
                 AudioSource s = gameObject.AddComponent<AudioSource>();
                 s.playOnAwake = false;

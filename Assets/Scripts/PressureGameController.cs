@@ -12,13 +12,25 @@ public class PressureGameController : MonoBehaviour
     public PressureToggle mainToggle;
     public Slider indicator;
     public Progressor timeProgressor;
+
+    public GameObject player;
+    public AudioSource src;
+    public SaveState save;
+
+    public ChooseAudio chooser;
     public float currentPressureValue = 0;
     public float targetPressureValue;
     public float lerpTime = 1f;
-    public float loseTimer = 5f;
+    public float loseTimer;
+    public float maxLoseTime;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
+        src = GetComponent<AudioSource>();
+        src.Play();
+        timeProgressor.SetMax(maxLoseTime);
         currentPressureValue += thermalToggle.currentValue;
         currentPressureValue += lowerToggle.currentValue;
         currentPressureValue += emergencyToggle.currentValue;
@@ -36,6 +48,7 @@ public class PressureGameController : MonoBehaviour
         }
 
         indicator.value = currentPressureValue;
+        src.pitch = 1 + currentPressureValue;
 
         if (currentPressureValue >= 0.65f)
         {
@@ -43,22 +56,21 @@ public class PressureGameController : MonoBehaviour
         }
         else
         {
-            loseTimer = Mathf.Min(5, loseTimer + Time.deltaTime * 2);
+            loseTimer = Mathf.Min(maxLoseTime, loseTimer + Time.deltaTime * 2);
         }
 
-        timeProgressor.SetValue(5 - loseTimer);
+        timeProgressor.SetValue(maxLoseTime - loseTimer);
 
         //Lose
         if (loseTimer <= 0)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().PressureFailure();
-            gameObject.SetActive(false);
         }
 
         //Win
         if (currentPressureValue == targetPressureValue && targetPressureValue == 0.6f)
         {
-            GameEventMessage.SendEvent("PressureWon");
+            GameEventMessage.SendEvent("GameWon");
             StartCoroutine(GameWon());
         }
     }
@@ -75,6 +87,8 @@ public class PressureGameController : MonoBehaviour
     private IEnumerator GameWon()
     {
         yield return new WaitForSeconds(1f);
-        // Save state and play sounds
+        save.changeFlag("valve");
+        chooser.Choose();
+        player.GetComponent<Player>().isInputAvailable = true;
     }
 }

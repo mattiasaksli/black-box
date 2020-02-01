@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public UIView transitionView;
     public GameObject sprite;
     public Light2D flashlight;
+    public SaveState save;
+
     public bool isInputAvailable = true;
     public float MoveSpeed = 5;
     public float raycastDistance = 0.05f;
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
         flashlight = GetComponentsInChildren<Light2D>()[1];
         anim = GetComponentInChildren<Animator>();
         transitionView = GameObject.Find("View - Transition").GetComponent<UIView>();
@@ -50,6 +53,11 @@ public class Player : MonoBehaviour
                 anim.SetBool("Walk", false);
                 flashlight.enabled = false;
             }
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+            horizontalDirection = 0;
         }
     }
 
@@ -89,16 +97,18 @@ public class Player : MonoBehaviour
     IEnumerator PressureRoutine()
     {
         transitionView.Show();
-        //Play sound & clear progress
+        //Play sound
         yield return new WaitForSeconds(1f);
+        save.Clear();
         SceneManager.LoadScene("Start");
     }
 
     IEnumerator PowerRoutine()
     {
         transitionView.Show();
-        //Play sound & clear progress
+        //Play sound
         yield return new WaitForSeconds(1f);
+        save.Clear();
         SceneManager.LoadScene("Start");
     }
 }

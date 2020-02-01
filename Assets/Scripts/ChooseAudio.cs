@@ -6,19 +6,39 @@ public class ChooseAudio : MonoBehaviour
     public AudioClip working;
     public AudioClip faulty;
     public SaveState save;
+    public DisplayTrigger DP;
+    public Status ST;
+    public string key = "engine";
 
     void Start()
     {
         save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
+        DP = GetComponent<DisplayTrigger>();
+        ST = GetComponent<Status>();
         src = GetComponent<AudioSource>();
-        if (save.flags["engine"])
+        Choose();
+    }
+
+    public void Choose()
+    {
+        if (save.flags[key])
         {
             src.clip = working;
+            ST.enabled = false;
+            DP.enabled = true;
         }
         else
         {
+            ST.enabled = true;
+            DP.enabled = false;
             src.clip = faulty;
         }
         src.Play();
+
+    }
+
+    public void Stop()
+    {
+        src.Stop();
     }
 }
