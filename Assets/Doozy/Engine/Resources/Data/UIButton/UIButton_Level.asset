@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f42f06ff6cc543ea942180e019f0fc8d, type: 3}
-  m_Name: UIView_Level
+  m_Name: UIButton_Level
   m_EditorClassIdentifier: 
   CategoryName: Level
-  DatabaseType: 2
+  DatabaseType: 0
   Names:
-  - Status
-  - LightsOut
-  - PressureGame
-  - 1
-  - 2.1
-  - 2.2
-  - 2.3
-  - 3.05
-  - 3.1
-  - 3.2
-  - 3.3
+  - 1 -> 2.1
+  - 1 -> 2.2
+  - 1 -> 2.3
+  - 2.1 -> 3.05
+  - 2.1 -> 2.2
+  - 2.2 -> 2.3
+  - 3.05 -> 3.1
+  - 3.05 -> 2.2
+  - 2.2 -> 3.2
+  - 2.3 -> 3.3
+  - Continue
