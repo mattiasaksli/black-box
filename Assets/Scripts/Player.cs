@@ -43,4 +43,14 @@ public class Player : MonoBehaviour
             gameObject.transform.position += (new Vector3(horizontalDirection, 0, 0) * MoveSpeed * Time.deltaTime);
         }
     }
+
+    public void PressureFailure()
+    {
+
+    }
+
+    public void PowerFailure()
+    {
+
+    }
 }
