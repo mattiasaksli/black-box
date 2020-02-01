@@ -7,13 +7,14 @@ public class LevelChange : MonoBehaviour
 {
     public UIView transitionView;
     public UIView label;
-    public int sceneToLoad;
+    public string sceneToLoad;
     public GameObject player;
     public float activationDistance;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        transitionView = GameObject.Find("View - Transition").GetComponent<UIView>();
     }
 
     void Update()
