@@ -2681,8 +2681,9 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 951dcce1ba6c0ae4aa97e0482ce52aee, type: 2}
+  m_sharedMaterial: {fileID: -4975469805524644257, guid: 951dcce1ba6c0ae4aa97e0482ce52aee,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3837,6 +3838,7 @@ GameObject:
   - component: {fileID: 389816595963648276}
   - component: {fileID: 389816595963648277}
   - component: {fileID: 389816595963648278}
+  - component: {fileID: 7575854194010726170}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3946,6 +3948,7 @@ MonoBehaviour:
   PlayerController: {fileID: 389816595963648278}
   raycastDistance: 0.05
   horizontalDirection: 0
+  transitionView: {fileID: 0}
 --- !u!61 &389816595963648277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3993,3 +3996,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &7575854194010726170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389816595963648274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

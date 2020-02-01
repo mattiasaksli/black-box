@@ -50,6 +50,7 @@ public class DisplayText : MonoBehaviour
             if (!scrolling)
             {
                 displayText = sentences[sentence];
+                text.text = displayText;
                 break;
             }
             displayText += character;

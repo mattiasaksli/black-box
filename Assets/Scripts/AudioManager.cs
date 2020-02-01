@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] stepSounds;
     public List<AudioSource> sources;
 
-    bool created;
+    private static bool created;
     int lastStep;
 
     void Start()
