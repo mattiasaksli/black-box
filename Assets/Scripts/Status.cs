@@ -1,4 +1,5 @@
-﻿using Doozy.Engine.UI;
+﻿using Doozy.Engine;
+using Doozy.Engine.UI;
 using UnityEngine;
 
 public class Status : MonoBehaviour
@@ -20,7 +21,7 @@ public class Status : MonoBehaviour
             label.Show();
             if (Input.GetKeyDown(KeyCode.F))
             {
-                status.Show();
+                GameEventMessage.SendEvent("Interacting");
                 label.Hide();
             }
         }

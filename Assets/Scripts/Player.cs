@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        transitionView = GameObject.Find("View - Transition").GetComponent<UIView>();
         transitionView.Hide();
         colliderOffset = gameObject.GetComponent<BoxCollider2D>().size.x / 2;
     }
