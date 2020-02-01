@@ -27,10 +27,8 @@ public class SaveState : MonoBehaviour
 
     public void Clear()
     {
-        foreach (string key in flags.Keys)
-        {
-            flags[key] = false;
-        }
+        created = false;
+        Destroy(this.gameObject);
     }
 
     public void changeFlag(string key)

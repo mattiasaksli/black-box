@@ -7,12 +7,8 @@ public class LightsOutController : MonoBehaviour
     public LightsOutButton[] buttons = new LightsOutButton[9];
     public GameObject player;
     public SaveState save;
-    public AudioSource src;
     public AudioSource buttonSrc;
-    public AudioClip working;
-    public AudioClip faulty;
-    public DisplayTrigger DP;
-    public Status ST;
+    public ChooseAudio chooser;
 
     void Start()
     {
@@ -56,11 +52,8 @@ public class LightsOutController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         save.changeFlag("engine");
-        src.clip = working;
-        src.Play();
+        chooser.Choose();
         player.GetComponent<Player>().isInputAvailable = true;
-        ST.enabled = false;
-        DP.enabled = true;
         // Save state and play sounds
     }
 }

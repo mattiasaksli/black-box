@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -194,12 +194,8 @@ MonoBehaviour:
   - {fileID: 0}
   player: {fileID: 0}
   save: {fileID: 0}
-  src: {fileID: 1855873091}
   buttonSrc: {fileID: 0}
-  working: {fileID: 8300000, guid: 487c910a497bb2c4a9ee4c5ef07b140d, type: 3}
-  faulty: {fileID: 8300000, guid: dade556cb01086f4c9e89111e9577ca7, type: 3}
-  DP: {fileID: 4444639690860214718}
-  ST: {fileID: 4444639690860214717}
+  chooser: {fileID: 1855873096}
 --- !u!114 &171174482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3603,6 +3599,9 @@ MonoBehaviour:
   working: {fileID: 8300000, guid: 487c910a497bb2c4a9ee4c5ef07b140d, type: 3}
   faulty: {fileID: 8300000, guid: dade556cb01086f4c9e89111e9577ca7, type: 3}
   save: {fileID: 0}
+  DP: {fileID: 0}
+  ST: {fileID: 0}
+  key: engine
 --- !u!4 &2143163001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7007544398188328050, guid: 33a603bc5748f7c4f901222b7601a47b,
@@ -7833,7 +7832,7 @@ GameObject:
   - component: {fileID: 8836524877202063189}
   - component: {fileID: 8836524877202063192}
   m_Layer: 0
-  m_Name: LadderDoor
+  m_Name: BaseDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7856,7 +7855,7 @@ MonoBehaviour:
   player: {fileID: 0}
   save: {fileID: 0}
   AM: {fileID: 0}
-  sceneToLoad: Start
+  sceneToLoad: Base
   activationDistance: 2
   key: 
   useVolume: 1
