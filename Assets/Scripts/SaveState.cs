@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveState : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class SaveState : MonoBehaviour
     public bool engine;
     public bool pipes;
     public bool goodEndUnlocked = false;
+    public Vector3 startRoomSpawnPos;
+    public Vector3 coreRoomSpawnPos;
+    public GameObject player;
 
     public static bool created;
 
@@ -26,6 +30,11 @@ public class SaveState : MonoBehaviour
         flags.Add("pipes", pipes);
     }
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     public void Clear()
     {
         created = false;
@@ -35,5 +44,27 @@ public class SaveState : MonoBehaviour
     public void changeFlag(string key)
     {
         flags[key] = true;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene s, LoadSceneMode m)
+    {
+        if (s.buildIndex == 1 && startRoomSpawnPos != null)
+        {
+            player.transform.position = startRoomSpawnPos;
+        }
+        else if (s.buildIndex == 3 && coreRoomSpawnPos != null)
+        {
+            player.transform.position = startRoomSpawnPos;
+        }
     }
 }

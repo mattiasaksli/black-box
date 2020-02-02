@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1116,11 +1116,12 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
-        AudioClip: {fileID: 0}
-        OutputAudioMixerGroup: {fileID: 0}
+        SoundName: 
+        AudioClip: {fileID: 8300000, guid: be933b9fd0c70d643ba10e41ce5fe776, type: 3}
+        OutputAudioMixerGroup: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce,
+          type: 2}
     PresetCategory: Uncategorized
     PresetName: Default
     PunchAnimation:
@@ -5822,11 +5823,12 @@ MonoBehaviour:
           m_Calls: []
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
-        AudioClip: {fileID: 0}
-        OutputAudioMixerGroup: {fileID: 0}
+        SoundName: 
+        AudioClip: {fileID: 8300000, guid: be933b9fd0c70d643ba10e41ce5fe776, type: 3}
+        OutputAudioMixerGroup: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce,
+          type: 2}
     PresetCategory: Uncategorized
     PresetName: Default
     PunchAnimation:

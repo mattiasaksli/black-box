@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LifeSupport.unity
     guid: 9158c9ff28e5d0f47b726b39c0114b8c
   - enabled: 1
+    path: Assets/Scenes/CoreRoom.unity
+    guid: 94777f35c5a583d4c8d06cbc493968e4
+  - enabled: 0
     path: Assets/Scenes/Core.unity
     guid: 0c8b66e1f11436046a6bd8df330a5f2f
   m_configObjects: {}
