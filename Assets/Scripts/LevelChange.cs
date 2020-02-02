@@ -41,11 +41,11 @@ public class LevelChange : MonoBehaviour
             {
                 if (sceneToLoad.Equals("PressureRoom"))
                 {
-                    save.startRoomSpawnPos = new Vector3(transform.position.x, 0, -1);
+                    save.startRoomSpawnPos = new Vector3(transform.position.x, 0, 0);
                 }
                 else if (sceneToLoad.Equals("PowerRoom") || sceneToLoad.Equals("LifeSupport"))
                 {
-                    save.coreRoomSpawnPos = new Vector3(transform.position.x, 0, -1);
+                    save.coreRoomSpawnPos = new Vector3(transform.position.x, 0, 0);
                 }
                 label.Hide();
                 StartCoroutine(LevelTransition());
