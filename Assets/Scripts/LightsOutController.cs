@@ -8,13 +8,16 @@ public class LightsOutController : MonoBehaviour
     public GameObject player;
     public SaveState save;
     public AudioSource buttonSrc;
+    public AudioClip winClip;
     public ChooseAudio chooser;
 
     void Start()
     {
+        buttonSrc = GetComponent<AudioSource>();
         save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
         buttons = GetComponentsInChildren<LightsOutButton>();
         player = GameObject.FindGameObjectWithTag("Player");
+        buttonSrc.Play();
     }
 
     void Update()
@@ -30,7 +33,9 @@ public class LightsOutController : MonoBehaviour
         //Win
         if (currentlyAllOn)
         {
-            GameEventMessage.SendEvent("LightsOutWon");
+            buttonSrc.clip = winClip;
+            buttonSrc.Play();
+
             StartCoroutine(GameWon());
         }
 
@@ -50,9 +55,10 @@ public class LightsOutController : MonoBehaviour
 
     private IEnumerator GameWon()
     {
+        yield return new WaitForSeconds(1f);
+        GameEventMessage.SendEvent("LightsOutWon");
         save.changeFlag("engine");
         chooser.Choose();
-        yield return new WaitForSeconds(1f);
         player.GetComponent<Player>().isInputAvailable = true;
     }
 }
