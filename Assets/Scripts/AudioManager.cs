@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
     {
         foreach (AudioSource sc in sources)
         {
-            if (!sc.isPlaying)
+            if (!sc.isPlaying || sc.clip == null)
             {
                 sc.volume = volume;
                 sc.clip = clip;

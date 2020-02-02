@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     public GameObject sprite;
     public Light2D flashlight;
     public SaveState save;
+    public AudioClip pressureLose;
+    public AudioClip powerLose;
 
     public bool isInputAvailable = true;
     public float MoveSpeed = 5;
@@ -103,18 +105,19 @@ public class Player : MonoBehaviour
 
     IEnumerator PressureRoutine()
     {
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlaySound(pressureLose, 1);
         transitionView.Show();
-        //Play sound
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         save.Clear();
         SceneManager.LoadScene("GameOpen");
     }
 
     IEnumerator PowerRoutine()
     {
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlaySound(powerLose, 1);
         transitionView.Show();
         //Play sound
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         save.Clear();
         SceneManager.LoadScene("GameOpen");
     }

@@ -264,6 +264,7 @@ MonoBehaviour:
   player: {fileID: 0}
   save: {fileID: 0}
   buttonSrc: {fileID: 0}
+  loseClip: {fileID: 8300000, guid: a411ae6bd4e4c0d4cbf23512c43075c1, type: 3}
   chooser: {fileID: 1855873096}
 --- !u!114 &171174482
 MonoBehaviour:
