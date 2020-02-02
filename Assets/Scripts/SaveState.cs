@@ -30,11 +30,6 @@ public class SaveState : MonoBehaviour
         flags.Add("pipes", pipes);
     }
 
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
-
     public void Clear()
     {
         created = false;
@@ -60,10 +55,12 @@ public class SaveState : MonoBehaviour
     {
         if (s.buildIndex == 1 && startRoomSpawnPos != null)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = startRoomSpawnPos;
         }
         else if (s.buildIndex == 3 && coreRoomSpawnPos != null)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = startRoomSpawnPos;
         }
     }
