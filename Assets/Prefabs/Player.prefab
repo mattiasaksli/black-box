@@ -109,8 +109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 15.9}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 0, y: 37.949997}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &389816594826111723
 CanvasRenderer:
@@ -2532,7 +2532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.04, y: 2.2900002}
+  m_AnchoredPosition: {x: 0.04, y: 2.7}
   m_SizeDelta: {x: 1118, y: 629}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &389816594894433806
@@ -2680,6 +2680,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Status
 
+    Status
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
@@ -2709,8 +2711,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2719,7 +2721,7 @@ MonoBehaviour:
   m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2747,15 +2749,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 133.26198, z: 0, w: 469.0623}
+  m_margin: {x: 0, y: 133.26198, z: 0, w: 476.0778}
   m_textInfo:
     textComponent: {fileID: 389816595016238963}
-    characterCount: 7
+    characterCount: 14
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
+    spaceCount: 2
+    wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

@@ -130,4 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   smoothTime: 1
-  yOffset: 2
+  yOffset: 2.5

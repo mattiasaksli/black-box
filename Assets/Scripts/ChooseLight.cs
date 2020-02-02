@@ -13,7 +13,7 @@ public class ChooseLight : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        light = GetComponent<Light2D>();
+        light = GetComponentInChildren<Light2D>();
         CA = GetComponentInParent<ChooseAudio>();
     }
 
