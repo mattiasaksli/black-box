@@ -66,7 +66,7 @@ public class SaveState : MonoBehaviour
         else if (s.buildIndex == 3 && coreRoomSpawnPos != null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            player.transform.position = startRoomSpawnPos;
+            player.transform.position = coreRoomSpawnPos;
         }
         else if (s.buildIndex == 6)
         {
