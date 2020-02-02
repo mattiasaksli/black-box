@@ -1,5 +1,6 @@
 ﻿using Doozy.Engine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DisplayTrigger : MonoBehaviour
 {
@@ -40,6 +41,24 @@ public class DisplayTrigger : MonoBehaviour
             label.Show();
             if (Input.GetKeyDown(KeyCode.F))
             {
+                string sceneName = SceneManager.GetActiveScene().name;
+                if (sceneName.Equals("Start"))
+                {
+                    save.startNote = true;
+                }
+                else if (sceneName.Equals("PressureRoom"))
+                {
+                    save.pressureNote = true;
+                }
+                else if (sceneName.Equals("Base"))
+                {
+                    save.baseNote = true;
+                }
+                else if (sceneName.Equals("LifeSupport"))
+                {
+                    save.lifeNote = true;
+                }
+
                 label.Hide();
                 playerDisplay.sentences = sentences;
                 playerDisplay.StartDisplay();

@@ -14,6 +14,11 @@ public class SaveState : MonoBehaviour
     public Vector3 coreRoomSpawnPos;
     public GameObject player;
 
+    public bool startNote = false;
+    public bool pressureNote = false;
+    public bool baseNote = false;
+    public bool lifeNote = false;
+
     public static bool created;
 
     void Awake()
@@ -62,6 +67,10 @@ public class SaveState : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = startRoomSpawnPos;
+        }
+        else if (s.buildIndex == 6)
+        {
+            goodEndUnlocked = startNote && pressureNote && baseNote && lifeNote;
         }
     }
 }

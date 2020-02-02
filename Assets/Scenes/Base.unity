@@ -5011,6 +5011,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MasterCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2091554902490023823, guid: 8a93f0df60fd2a94b8c3f31bb62d3c66,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1571
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091554902490023823, guid: 8a93f0df60fd2a94b8c3f31bb62d3c66,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091554903635260297, guid: 8a93f0df60fd2a94b8c3f31bb62d3c66,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091554903635260297, guid: 8a93f0df60fd2a94b8c3f31bb62d3c66,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a93f0df60fd2a94b8c3f31bb62d3c66, type: 3}
 --- !u!61 &3031377833812017609
