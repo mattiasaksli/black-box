@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("Walk", false);
             horizontalDirection = 0;
+            flashlight.enabled = false;
         }
     }
 

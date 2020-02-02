@@ -28,6 +28,14 @@ public class DisplayText : MonoBehaviour
         StartCoroutine(ScrollText());
     }
 
+    void Update()
+    {
+        if (inDialogue && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.Space)))
+        {
+            NextSentence();
+        }
+    }
+
     public void NextSentence()
     {
         if (scrolling)
