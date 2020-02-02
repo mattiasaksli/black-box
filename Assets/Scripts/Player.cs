@@ -105,17 +105,17 @@ public class Player : MonoBehaviour
     {
         transitionView.Show();
         //Play sound
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         save.Clear();
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("GameOpen");
     }
 
     IEnumerator PowerRoutine()
     {
         transitionView.Show();
         //Play sound
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         save.Clear();
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("GameOpen");
     }
 }
