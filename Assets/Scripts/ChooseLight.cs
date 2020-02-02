@@ -7,6 +7,8 @@ public class ChooseLight : MonoBehaviour
     SpriteRenderer renderer;
     ChooseAudio CA;
 
+    public Color workingColor = Color.green;
+    public Color brokenColor = Color.red;
     public Sprite green;
     public Sprite red;
     // Start is called before the first frame update
@@ -22,12 +24,12 @@ public class ChooseLight : MonoBehaviour
     {
         if (CA.broken)
         {
-            light.color = Color.red;
+            light.color = brokenColor;
             renderer.sprite = red;
         }
         else
         {
-            light.color = Color.green;
+            light.color = workingColor;
             renderer.sprite = green;
         }
     }
