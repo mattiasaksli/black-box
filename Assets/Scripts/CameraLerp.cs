@@ -4,6 +4,7 @@ public class CameraLerp : MonoBehaviour
 {
     public GameObject player;
     public float smoothTime;
+    public float yOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,7 @@ public class CameraLerp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPos = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+        Vector3 targetPos = new Vector3(player.transform.position.x, player.transform.position.y + yOffset, -10);
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothTime * Time.deltaTime);
     }
 }

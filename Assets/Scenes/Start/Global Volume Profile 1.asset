@@ -16,10 +16,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   type:
     m_OverrideState: 1
-    m_Value: 6
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.531
+    m_Value: 1
     min: 0
     max: 1
   response:
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.413
+    m_Value: 0.236
     min: -1
     max: 1
   xMultiplier:

@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public float raycastDistance = 0.05f;
     public float horizontalDirection;
 
-    private float colliderOffset = 3.2f;
+    public float colliderOffset = 3.2f;
 
     void Start()
     {
@@ -40,11 +40,11 @@ public class Player : MonoBehaviour
                 flashlight.enabled = true;
                 if (horizontalDirection > 0)
                 {
-                    sprite.transform.localScale = new Vector3(3, 3, 1);
+                    sprite.transform.localScale = new Vector3(1, 1, 1);
                 }
                 else
                 {
-                    sprite.transform.localScale = new Vector3(-3, 3, 1);
+                    sprite.transform.localScale = new Vector3(-1, 1, 1);
                 }
                 anim.SetBool("Walk", true);
             }
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
     {
         float sideOffset = colliderOffset * (horizontalDirection < 0 ? -1 : 1);
 
-        Vector2 origin = new Vector2(transform.position.x + sideOffset, transform.position.y);
+        Vector2 origin = new Vector2(transform.position.x + sideOffset, transform.position.y + 1f);
         Vector2 dir = new Vector2(horizontalDirection < 0 ? -1 : 1, 0);
 
         Debug.DrawRay(origin, dir * raycastDistance);
