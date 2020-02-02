@@ -58,6 +58,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ChangeInput()
+    {
+        if (isInputAvailable)
+        {
+            isInputAvailable = false;
+        }
+        else
+        {
+            isInputAvailable = true;
+        }
+    }
+
     private void FixedUpdate()
     {
         Vector2 origin = new Vector2(transform.position.x, transform.position.y + 1f);

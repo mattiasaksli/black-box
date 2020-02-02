@@ -86,9 +86,9 @@ public class PressureGameController : MonoBehaviour
 
     private IEnumerator GameWon()
     {
+        save.changeFlag("valve");
         chooser.Choose();
         yield return new WaitForSeconds(1f);
-        save.changeFlag("valve");
         player.GetComponent<Player>().isInputAvailable = true;
     }
 }
