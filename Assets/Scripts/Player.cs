@@ -18,8 +18,6 @@ public class Player : MonoBehaviour
     public float raycastDistance = 0.05f;
     public float horizontalDirection;
 
-    public float colliderOffset = 3.2f;
-
     void Start()
     {
         save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
@@ -27,7 +25,6 @@ public class Player : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         transitionView = GameObject.Find("View - Transition").GetComponent<UIView>();
         transitionView.Hide();
-        colliderOffset = gameObject.GetComponent<BoxCollider2D>().size.x / 2;
     }
 
     void Update()
@@ -63,9 +60,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float sideOffset = colliderOffset * (horizontalDirection < 0 ? -1 : 1);
-
-        Vector2 origin = new Vector2(transform.position.x + sideOffset, transform.position.y + 1f);
+        Vector2 origin = new Vector2(transform.position.x, transform.position.y + 1f);
         Vector2 dir = new Vector2(horizontalDirection < 0 ? -1 : 1, 0);
 
         Debug.DrawRay(origin, dir * raycastDistance);
