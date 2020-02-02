@@ -713,7 +713,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1231928366
@@ -5035,6 +5035,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaveState
       objectReference: {fileID: 0}
+    - target: {fileID: 6479437144875782534, guid: 0fabc7fac49e98a4d98cce6c1d8d23d9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1424307473}
     - target: {fileID: 6479437144875782535, guid: 0fabc7fac49e98a4d98cce6c1d8d23d9,
         type: 3}
       propertyPath: m_LocalPosition.x
