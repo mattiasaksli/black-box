@@ -261,78 +261,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &32010757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 32010758}
-  - component: {fileID: 32010760}
-  - component: {fileID: 32010759}
-  m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &32010758
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32010757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 514482521}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &32010759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32010757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_spriteAsset: {fileID: 0}
-  m_material: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
-  m_isDefaultMaterial: 0
-  m_padding: 1.25
-  m_canvasRenderer: {fileID: 32010760}
-  m_TextComponent: {fileID: 514482522}
-  m_materialReferenceIndex: 1
---- !u!222 &32010760
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32010757}
-  m_CullTransparentMesh: 0
 --- !u!1 &45220127
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +321,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 45220130}
   m_TextComponent: {fileID: 915494242}
   m_materialReferenceIndex: 1
@@ -440,7 +368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09379168, y: 0.4592181}
   m_AnchorMax: {x: 0.906, y: 0.9164911}
-  m_AnchoredPosition: {x: 0.01965332, y: 5.999878}
+  m_AnchoredPosition: {x: 0, y: 52}
   m_SizeDelta: {x: -33.899994, y: -44.000427}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60373735
@@ -461,7 +389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<line-height=45><cspace=20>-You hear a panicked voice from behind the
+  m_text: "<line-height=50><cspace=20>-You hear a panicked voice from behind the
     barricade-</cspace>\n\nAre you the one who's been running around flipping all
     the switches back on in here? \n\nYou don't have any idea, do you? Didn't you
     see those things escape? Barely half the station survived! Where the hell did
@@ -665,7 +593,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
-  - {fileID: 279071780}
+  - {fileID: 979078356}
   m_Father: {fileID: 174023036}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -692,15 +620,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'That...
+  m_text: '<line-height=60>That...
 
 
-    That would be nice. You promise you''ll do it?
+    That would be nice. You promise you''ll
+    do it?
 
 
-    I though
-    I would have to starve for days in here before I finally passed. You would really
-    do that for me?
+    I though I would have to starve for days in here before I finally
+    passed. You would really do that for me?
 
 
     You promise?'
@@ -749,7 +677,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 163
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -787,7 +715,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 279071781}
+  - {fileID: 979078357}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -841,8 +769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09379168, y: 0.0891633}
   m_AnchorMax: {x: 0.906, y: 0.477764}
-  m_AnchoredPosition: {x: 0.19970703, y: 0}
-  m_SizeDelta: {x: -33.5, y: -27.5}
+  m_AnchoredPosition: {x: 0.19970703, y: 2.3017883}
+  m_SizeDelta: {x: -33.5, y: 51.829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98850242
 MonoBehaviour:
@@ -933,7 +861,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_Children: []
+  m_Children:
+  - {fileID: 250020764}
   m_Father: {fileID: 636294098}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -960,16 +889,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You probably have no clue what the core even does!
+  m_text: '<line-height=50>You probably have no clue what the core even does!
 
 
-    We are not meant
-    to go on! Nothing in this place is worth the pain it would cause everyone else! 
-    You won''t sweet talk me with your lies!
+    We
+    are not meant to go on! Nothing in this place is worth the pain it would cause
+    everyone else!  You won''t sweet talk me with your lies!
 
 
-    Say another word and I''ll rupture
-    the whole sector!'
+    Say another word
+    and I''ll rupture the whole sector!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -1015,7 +944,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 235
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1053,7 +982,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 250020765}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2330,6 +2259,78 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &250020763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 250020764}
+  - component: {fileID: 250020766}
+  - component: {fileID: 250020765}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &250020764
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250020763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 115339489}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &250020765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250020763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 250020766}
+  m_TextComponent: {fileID: 115339490}
+  m_materialReferenceIndex: 1
+--- !u!222 &250020766
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250020763}
+  m_CullTransparentMesh: 0
 --- !u!1 &269683867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,78 +2576,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &279071779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 279071780}
-  - component: {fileID: 279071782}
-  - component: {fileID: 279071781}
-  m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &279071780
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279071779}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 96868016}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &279071781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279071779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_spriteAsset: {fileID: 0}
-  m_material: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
-  m_isDefaultMaterial: 0
-  m_padding: 1.25
-  m_canvasRenderer: {fileID: 279071782}
-  m_TextComponent: {fileID: 96868017}
-  m_materialReferenceIndex: 1
---- !u!222 &279071782
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279071779}
-  m_CullTransparentMesh: 0
 --- !u!1 &328857230
 GameObject:
   m_ObjectHideFlags: 0
@@ -8120,8 +8049,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: listen, i don't know all of the circumstances but at this rate we'll both
-    die and nothing will improve. Can you access the life support systems in there?
+  m_text: <line-height=50>Listen, I don't know all of the circumstances but at this
+    rate we'll both die and nothing will improve. Can you access the life support
+    systems in there?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -8222,6 +8152,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372126382}
   m_CullTransparentMesh: 0
+--- !u!1 &375387734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 375387735}
+  - component: {fileID: 375387737}
+  - component: {fileID: 375387736}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &375387735
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375387734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 514482521}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &375387736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375387734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 375387737}
+  m_TextComponent: {fileID: 514482522}
+  m_materialReferenceIndex: 1
+--- !u!222 &375387737
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375387734}
+  m_CullTransparentMesh: 0
 --- !u!1 &449721637
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,7 +8253,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
-  - {fileID: 465572943}
+  - {fileID: 906014348}
   m_Father: {fileID: 1872595912}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8278,8 +8280,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -You hear the distressed man mumble  to himself before running away from
-    the barricade-
+  m_text: <line-height=70>-You hear the distressed man mumble  to himself before
+    running away from the barricade-
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -8363,7 +8365,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 465572944}
+  - {fileID: 906014349}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -8408,7 +8410,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_Children: []
+  m_Children:
+  - {fileID: 837370045}
   m_Father: {fileID: 1432249567}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8435,16 +8438,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You really have no clue do you...?
+  m_text: '<line-height=55>You really have no clue do you...?
 
 
-    This place was never meant to
-    exist. That is all you need to know. I won''t let anyone reach the core and initiate
-    the restart protocol.
+    This place was
+    never meant to exist. That is all you need to know. I won''t let anyone reach
+    the core and initiate the restart protocol.
 
 
-    I will die by this last bastion of sabotage. You
-    may have nothing to do with this place.  I suggest you do the same. That is best...'
+    I will die by this last bastion
+    of sabotage. You may have nothing to do with this place.  I suggest you do the
+    same. That is best...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -8490,7 +8494,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 218
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -8528,7 +8532,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 837370046}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -8544,78 +8548,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450516450}
-  m_CullTransparentMesh: 0
---- !u!1 &465572942
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 465572943}
-  - component: {fileID: 465572945}
-  - component: {fileID: 465572944}
-  m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &465572943
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465572942}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 449721638}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &465572944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465572942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_spriteAsset: {fileID: 0}
-  m_material: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
-  m_isDefaultMaterial: 0
-  m_padding: 1.25
-  m_canvasRenderer: {fileID: 465572945}
-  m_TextComponent: {fileID: 449721639}
-  m_materialReferenceIndex: 1
---- !u!222 &465572945
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465572942}
   m_CullTransparentMesh: 0
 --- !u!1 &470078268
 GameObject:
@@ -8654,7 +8586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09379168, y: 0.0891633}
   m_AnchorMax: {x: 0.906, y: 0.477764}
-  m_AnchoredPosition: {x: 0.19995117, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0.19995117, y: -57}
   m_SizeDelta: {x: -33.5, y: -27.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470078270
@@ -8675,7 +8607,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 30
+  m_Spacing: 1.4
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -8755,8 +8687,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09379168, y: 0.0891633}
   m_AnchorMax: {x: 0.906, y: 0.477764}
-  m_AnchoredPosition: {x: 0.19970703, y: -0.000061035156}
-  m_SizeDelta: {x: -33.5, y: -27.5}
+  m_AnchoredPosition: {x: 0.19970703, y: -30}
+  m_SizeDelta: {x: -33.5, y: 9.6073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471883671
 MonoBehaviour:
@@ -8776,7 +8708,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 30
+  m_Spacing: 2.72
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -11266,7 +11198,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
-  - {fileID: 32010758}
+  - {fileID: 375387735}
   m_Father: {fileID: 1813947274}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11293,11 +11225,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'So be it... I always knew this was my fate!
+  m_text: '<line-height=70>So be it... I always knew this was my fate!
 
 
-    -You hear the distressed
-    man mumble  to himself before running away from the barricade-'
+    -You
+    hear the distressed man mumble  to himself before running away from the barricade-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -11381,7 +11313,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 32010759}
+  - {fileID: 375387736}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -13230,7 +13162,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_Children: []
+  m_Children:
+  - {fileID: 1118351163}
   m_Father: {fileID: 343902371}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13257,8 +13190,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I have access to all of the relief valves in this sector! You take another
-    step and I will rip us both to shreds!
+  m_text: <line-height=70>I have access to all of the relief valves in this sector!
+    You take another step and I will rip us both to shreds!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -13342,7 +13275,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1118351164}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -13415,9 +13348,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I'm sorry. You don't have to do that. Try to understand that my life is
-    on the line here as well. I was just thrown in here with no information, help
-    me understand what is going on.
+  m_text: <line-height=50>I'm sorry. You don't have to do that. Try to understand
+    that my life is on the line here as well. I was just thrown in here with no information,
+    help me understand what is going on.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -13530,7 +13463,7 @@ GameObject:
   - component: {fileID: 601113894}
   - component: {fileID: 601113893}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart Atlas Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13578,7 +13511,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 601113894}
   m_TextComponent: {fileID: 598389666}
   m_materialReferenceIndex: 1
@@ -14297,8 +14230,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Calm down. If you just let me get to the core I can undo all of this. There
-    is no reason to be so upset -lie-
+  m_text: <line-height=50>Calm down. If you just let me get to the core I can undo
+    all of this. There is no reason to be so upset -lie-
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -15036,8 +14969,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WAIT, JUST CALM DOWN FOR A SECOND. I don't know anything about this place.
-    All I know is that I am your only hope of doing anything about this situation!
+  m_text: <line-height=65>WAIT, JUST CALM DOWN FOR A SECOND. I don't know anything
+    about this place. All I know is that I am your only hope of doing anything about
+    this situation!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -15083,7 +15017,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 117
+  m_firstOverflowCharacterIndex: 57
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -17684,8 +17618,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Don't worry, I'm only here to help. You must not know about the secret
-    backup plan. You'll be just fine if you let me pass. -lie-
+  m_text: <line-height=60>Don't worry, I'm only here to help. You must not know about
+    the secret backup plan. You'll be just fine if you let me pass. -lie-
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -17731,7 +17665,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 118
+  m_firstOverflowCharacterIndex: 60
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -17842,8 +17776,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Don't worry, i'm here to fix this place. If you just help me out we can
-    figure this out and escape together!
+  m_text: <line-height=50>Don't worry, i'm here to fix this place. If you just help
+    me out we can figure this out and escape together!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -20361,6 +20295,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833257694}
+  m_CullTransparentMesh: 0
+--- !u!1 &837370044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837370045}
+  - component: {fileID: 837370047}
+  - component: {fileID: 837370046}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &837370045
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837370044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 450516451}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &837370046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837370044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 837370047}
+  m_TextComponent: {fileID: 450516452}
+  m_materialReferenceIndex: 1
+--- !u!222 &837370047
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837370044}
   m_CullTransparentMesh: 0
 --- !u!1001 &865806383
 PrefabInstance:
@@ -22905,8 +22911,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fine, but I don't want to die standing around here. I can make things a
-    lot quicker for us both by destroying the core.
+  m_text: <line-height=50>Fine, but I don't want to die standing around here. I can
+    make things a lot quicker for us both by destroying the core.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -25533,6 +25539,78 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 903617819}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &906014347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906014348}
+  - component: {fileID: 906014350}
+  - component: {fileID: 906014349}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &906014348
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906014347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 449721638}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &906014349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906014347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 906014350}
+  m_TextComponent: {fileID: 449721639}
+  m_materialReferenceIndex: 1
+--- !u!222 &906014350
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906014347}
+  m_CullTransparentMesh: 0
 --- !u!1 &915494240
 GameObject:
   m_ObjectHideFlags: 0
@@ -25690,6 +25768,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915494240}
   m_CullTransparentMesh: 0
+--- !u!1 &979078355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 979078356}
+  - component: {fileID: 979078358}
+  - component: {fileID: 979078357}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &979078356
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979078355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 96868016}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &979078357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979078355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 979078358}
+  m_TextComponent: {fileID: 96868017}
+  m_materialReferenceIndex: 1
+--- !u!222 &979078358
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979078355}
+  m_CullTransparentMesh: 0
 --- !u!1 &992348693
 GameObject:
   m_ObjectHideFlags: 0
@@ -25822,7 +25972,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 992582749}
   m_TextComponent: {fileID: 881074717}
   m_materialReferenceIndex: 1
@@ -25846,7 +25996,7 @@ GameObject:
   - component: {fileID: 1001390078}
   - component: {fileID: 1001390077}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart Atlas Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25894,7 +26044,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 1001390078}
   m_TextComponent: {fileID: 1007710342}
   m_materialReferenceIndex: 1
@@ -25962,8 +26112,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You have clearly lost every last one of your marbles. Just let me fix the
-    life support and psych can help you out after that.
+  m_text: <line-height=65>You have clearly lost every last one of your marbles. Just
+    let me fix the life support and psych can help you out after that.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -26009,7 +26159,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 120
+  m_firstOverflowCharacterIndex: 59
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -28518,6 +28668,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079224591}
+  m_CullTransparentMesh: 0
+--- !u!1 &1118351162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118351163}
+  - component: {fileID: 1118351165}
+  - component: {fileID: 1118351164}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1118351163
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118351162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 573783248}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1118351164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118351162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 1118351165}
+  m_TextComponent: {fileID: 573783249}
+  m_materialReferenceIndex: 1
+--- !u!222 &1118351165
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118351162}
   m_CullTransparentMesh: 0
 --- !u!1 &1125510434
 GameObject:
@@ -31394,7 +31616,7 @@ GameObject:
   - component: {fileID: 1225278209}
   - component: {fileID: 1225278208}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart Atlas Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31442,7 +31664,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 1225278209}
   m_TextComponent: {fileID: 1766715446}
   m_materialReferenceIndex: 1
@@ -33959,7 +34181,7 @@ GameObject:
   - component: {fileID: 1248490739}
   - component: {fileID: 1248490738}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart Atlas Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34007,7 +34229,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 1248490739}
   m_TextComponent: {fileID: 823427335}
   m_materialReferenceIndex: 1
@@ -34056,7 +34278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09379168, y: 0.0891633}
   m_AnchorMax: {x: 0.906, y: 0.477764}
-  m_AnchoredPosition: {x: 0.20007324, y: 0}
+  m_AnchoredPosition: {x: 0.20007324, y: -38}
   m_SizeDelta: {x: -33.5, y: -27.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255956758
@@ -34077,7 +34299,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 30
+  m_Spacing: 114.9
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -34232,7 +34454,7 @@ GameObject:
   - component: {fileID: 1275948378}
   - component: {fileID: 1275948377}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart Atlas Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34280,7 +34502,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 1275948378}
   m_TextComponent: {fileID: 723120057}
   m_materialReferenceIndex: 1
@@ -41107,7 +41329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09379168, y: 0.0891633}
   m_AnchorMax: {x: 0.906, y: 0.477764}
-  m_AnchoredPosition: {x: 0.22021484, y: 4}
+  m_AnchoredPosition: {x: 0.20007324, y: -32}
   m_SizeDelta: {x: -33.5, y: -27.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671426072
@@ -41128,7 +41350,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 30
+  m_Spacing: 70.1
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -41353,7 +41575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09379168, y: 0.4592181}
   m_AnchorMax: {x: 0.906, y: 0.9164911}
-  m_AnchoredPosition: {x: -0.00024414062, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0.00024414062, y: 42}
   m_SizeDelta: {x: -33.900146, y: -44.000427}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1757920400
@@ -41374,14 +41596,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fix this place? Are you one of the meatheads they sent to "move" me? I
-    don''t know what they told you but it''s all over!  Half the base is in ruins
-    after the breach in Special Containment. There''s nothing to fix here!
+  m_text: '<line-height=60>Fix this place? Are you one of the meatheads they sent
+    to "move" me? I don''t know what they told you but it''s all over!  Half the
+    base is in ruins after the breach in Special Containment. There''s nothing to
+    fix here!
 
 
-    ALL
-    OF MY FRIENDS ARE DEAD, NOBODY CAN SAVE ME ANYMORE AND YOU KNOW IT! WHY ARE YOU
-    LYING TO ME?!?!'
+    ALL OF MY FRIENDS ARE DEAD, NOBODY CAN SAVE ME ANYMORE AND YOU
+    KNOW IT! WHY ARE YOU LYING TO ME?!?!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -41427,7 +41649,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 265
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -41678,8 +41900,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Are you sure there is no other way? if you just allowed me to access the
-    core and find some alternative, I'm sure we'd both come out of this alive.
+  m_text: <line-height=50>Are you sure there is no other way? if you just allowed
+    me to access the core and find some alternative, I'm sure we'd both come out
+    of this alive.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -41836,8 +42059,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Andrew... listen to me.  I'll destroy the core. That way you can rest sooner
-    as well, all right? If I'll die either way, I don't mind going out with a bang.
+  m_text: <line-height=60>Andrew... listen to me.  I'll destroy the core. That way
+    you can rest sooner as well, all right? If I'll die either way, I don't mind
+    going out with a bang.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc8bda66fe92e974a82e7da4ee160027, type: 2}
   m_sharedMaterial: {fileID: 5718728283795499677, guid: fc8bda66fe92e974a82e7da4ee160027,
@@ -41883,7 +42107,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 121
+  m_firstOverflowCharacterIndex: 61
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -42715,7 +42939,7 @@ GameObject:
   - component: {fileID: 1840942947}
   - component: {fileID: 1840942946}
   m_Layer: 0
-  m_Name: TMP SubMeshUI [pixelart Atlas Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [pixelart SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42763,7 +42987,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 1840942947}
   m_TextComponent: {fileID: 372126384}
   m_materialReferenceIndex: 1
@@ -48310,7 +48534,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 2053912205}
   m_TextComponent: {fileID: 1766610406}
   m_materialReferenceIndex: 1
