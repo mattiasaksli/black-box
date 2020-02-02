@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup output;
     public AudioClip[] stepSounds;
     public List<AudioSource> sources;
+    public AudioClip ambient;
 
     private static bool created;
     int lastStep;

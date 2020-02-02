@@ -44,6 +44,7 @@ public class LightsOutController : MonoBehaviour
         if (currentlyAllOff)
         {
             player.GetComponent<Player>().PowerFailure();
+            chooser.Stop();
             this.enabled = false;
         }
     }

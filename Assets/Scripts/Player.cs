@@ -114,10 +114,9 @@ public class Player : MonoBehaviour
 
     IEnumerator PowerRoutine()
     {
-        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlaySound(powerLose, 1);
         transitionView.Show();
-        //Play sound
-        yield return new WaitForSeconds(4f);
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlaySound(powerLose, 1);
+        yield return new WaitForSeconds(33f);
         save.Clear();
         SceneManager.LoadScene("GameOpen");
     }

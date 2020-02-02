@@ -150,3 +150,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 572f6025ed29de9488d51b34be91c623, type: 3}
   - {fileID: 8300000, guid: 9b37be8f25fa43843a1d44ce29a9b036, type: 3}
   sources: []
+  ambient: {fileID: 8300000, guid: 60d625a0c9f6b0f40a5e9cbbf2a76437, type: 3}
