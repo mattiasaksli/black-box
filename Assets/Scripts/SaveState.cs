@@ -8,6 +8,7 @@ public class SaveState : MonoBehaviour
     public bool valve;
     public bool engine;
     public bool pipes;
+    public bool goodEndUnlocked = false;
 
     public static bool created;
 
