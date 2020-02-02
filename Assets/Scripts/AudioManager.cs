@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup output;
     public AudioClip[] stepSounds;
     public List<AudioSource> sources;
+    public AudioClip ambient;
 
     private static bool created;
     int lastStep;
@@ -65,7 +66,7 @@ public class AudioManager : MonoBehaviour
     {
         foreach (AudioSource sc in sources)
         {
-            if (!sc.isPlaying)
+            if (!sc.isPlaying || sc.clip == null)
             {
                 sc.volume = volume;
                 sc.clip = clip;

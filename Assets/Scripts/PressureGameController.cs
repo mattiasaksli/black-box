@@ -65,6 +65,8 @@ public class PressureGameController : MonoBehaviour
         if (loseTimer <= 0)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().PressureFailure();
+            chooser.Stop();
+            this.enabled = false;
         }
 
         //Win

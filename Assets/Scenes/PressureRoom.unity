@@ -2562,6 +2562,7 @@ MonoBehaviour:
   timeProgressor: {fileID: 609119056}
   player: {fileID: 0}
   src: {fileID: 0}
+  loseClip: {fileID: 8300000, guid: 4a197cd7f4002384db536d755279f805, type: 3}
   save: {fileID: 0}
   chooser: {fileID: 1628742531}
   currentPressureValue: 0

@@ -3838,7 +3838,6 @@ GameObject:
   - component: {fileID: 389816595963648273}
   - component: {fileID: 389816595963648279}
   - component: {fileID: 389816595963648276}
-  - component: {fileID: 389816595963648278}
   - component: {fileID: 275934769288745589}
   m_Layer: 0
   m_Name: Player
@@ -3896,36 +3895,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  PlayerController: {fileID: 389816595963648278}
+  PlayerController: {fileID: 0}
   transitionView: {fileID: 0}
   sprite: {fileID: 6242447202622374885}
   flashlight: {fileID: 0}
   save: {fileID: 0}
+  pressureLose: {fileID: 8300000, guid: 4a197cd7f4002384db536d755279f805, type: 3}
+  powerLose: {fileID: 8300000, guid: a411ae6bd4e4c0d4cbf23512c43075c1, type: 3}
   isInputAvailable: 1
   MoveSpeed: 5
   raycastDistance: 1
   horizontalDirection: 0
---- !u!50 &389816595963648278
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389816595963648274}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!82 &275934769288745589
 AudioSource:
   m_ObjectHideFlags: 0
