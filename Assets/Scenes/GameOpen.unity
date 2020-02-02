@@ -2713,7 +2713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18956251, y: 0.5}
   m_AnchorMax: {x: 0.81243753, y: 0.8457819}
-  m_AnchoredPosition: {x: -1.999939, y: -259.32123}
+  m_AnchoredPosition: {x: -1.9998779, y: -259.32123}
   m_SizeDelta: {x: -7.0999756, y: -6.149994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &731334052
@@ -4046,7 +4046,7 @@ MonoBehaviour:
 
 
     Use
-    the F key to interact with the world.'
+    the <color=#FF3333>F</color> key to interact with the world.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 951dcce1ba6c0ae4aa97e0482ce52aee, type: 2}
   m_sharedMaterial: {fileID: -4975469805524644257, guid: 951dcce1ba6c0ae4aa97e0482ce52aee,
