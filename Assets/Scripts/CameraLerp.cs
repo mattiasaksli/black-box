@@ -13,7 +13,7 @@ public class CameraLerp : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         Vector3 targetPos = new Vector3(player.transform.position.x, player.transform.position.y + yOffset, -10);
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothTime * Time.deltaTime);

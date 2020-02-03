@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389816594435553169}
-  m_LocalRotation: {x: -0, y: -0, z: -0.6958781, w: 0.71816}
-  m_LocalPosition: {x: 0.643, y: -0.25, z: 1.2041016}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.724, y: -0.25, z: 1.204102}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6242447202622374884}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -87.051}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &389816594435553175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.96972364, b: 0.759434, a: 1}
-  m_Intensity: 1
+  m_FalloffIntensity: 0.826
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.79
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -56,8 +56,8 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 123.26
-  m_PointLightOuterAngle: 123.26
+  m_PointLightInnerAngle: 68
+  m_PointLightOuterAngle: 125
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 10.164797
   m_PointLightDistance: 3
@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -7}
+  m_AnchoredPosition: {x: 0, y: 29.75}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &389816594826111723
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2528,11 +2528,11 @@ RectTransform:
   m_Children:
   - {fileID: 389816595647042574}
   m_Father: {fileID: 389816595963648273}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.04, y: 2.7}
+  m_AnchoredPosition: {x: 0.04, y: 3.375}
   m_SizeDelta: {x: 1118, y: 629}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &389816594894433806
@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 544
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 10
@@ -2799,12 +2799,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389816595032308278}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.72, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.27, y: -0.07999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 389816595963648273}
-  m_RootOrder: 0
+  m_Father: {fileID: 6242447202622374884}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &389816595032308276
 MonoBehaviour:
@@ -2820,9 +2820,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.76
+  m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.82
+  m_Intensity: 0.62
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -2833,8 +2833,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.78
-  m_PointLightOuterRadius: 2.62
+  m_PointLightInnerRadius: 0.41
+  m_PointLightOuterRadius: 2.24
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -3857,7 +3857,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 389816595032308277}
   - {fileID: 389816594894433802}
   - {fileID: 6242447202622374884}
   m_Father: {fileID: 0}
@@ -3881,6 +3880,7 @@ MonoBehaviour:
   scrolling: 0
   text: {fileID: 389816595016238963}
   inDialogue: 0
+  first: 1
   src: {fileID: 0}
 --- !u!114 &389816595963648276
 MonoBehaviour:
@@ -3903,6 +3903,7 @@ MonoBehaviour:
   pressureLose: {fileID: 8300000, guid: 4a197cd7f4002384db536d755279f805, type: 3}
   powerLose: {fileID: 8300000, guid: a411ae6bd4e4c0d4cbf23512c43075c1, type: 3}
   isInputAvailable: 1
+  levelChanging: 0
   MoveSpeed: 5
   raycastDistance: 1
   horizontalDirection: 0
@@ -4034,8 +4035,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 389816594435553168}
+  - {fileID: 389816595032308277}
   m_Father: {fileID: 389816595963648273}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6242447202622374886
 SpriteRenderer:
@@ -4118,3 +4120,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6211b5a48a98e9049b88d6d900057d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashlightClip: {fileID: 8300000, guid: c3025dc6b55ae234994062b2b1f0c800, type: 3}

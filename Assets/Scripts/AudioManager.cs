@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     public List<AudioSource> sources;
     public AudioClip ambient;
 
-    private static bool created;
+    public static bool created;
     int lastStep;
 
     void Start()

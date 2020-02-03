@@ -8,8 +8,8 @@ public class PressureToggle : MonoBehaviour
     public float currentValue;
     public Toggle toggle;
     public PressureGameController controller;
-    public Color onColor = new Color(1, 0.5f, 0.15f);
-    public Color offColor = new Color(0.8f, 0.8f, 0.8f);
+    public Color onColor;
+    public Color offColor;
 
     void Start()
     {

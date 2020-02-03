@@ -60,6 +60,7 @@ public class LevelChange : MonoBehaviour
     IEnumerator LevelTransition()
     {
         player.GetComponent<Player>().isInputAvailable = false;
+        player.GetComponent<Player>().levelChanging = true;
         AM.PlaySound(useSound, useVolume);
         transitionView.Show();
         yield return new WaitForSeconds(useSound.length - 1f);

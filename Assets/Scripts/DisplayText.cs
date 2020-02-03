@@ -11,6 +11,7 @@ public class DisplayText : MonoBehaviour
     public bool scrolling;
     public TMP_Text text;
     public bool inDialogue = false;
+    public bool first = true;
 
     public AudioSource src;
 
@@ -21,16 +22,20 @@ public class DisplayText : MonoBehaviour
 
     public void StartDisplay()
     {
-        this.GetComponent<Player>().isInputAvailable = false;
-        inDialogue = true;
-        textView.Show();
-        sentence = 0;
-        StartCoroutine(ScrollText());
+        if (!inDialogue)
+        {
+            first = true;
+            this.GetComponent<Player>().isInputAvailable = false;
+            inDialogue = true;
+            textView.Show();
+            sentence = 0;
+            StartCoroutine(ScrollText());
+        }
     }
 
     void Update()
     {
-        if (inDialogue && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.Space)))
+        if (inDialogue && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F)) && !first)
         {
             NextSentence();
         }
@@ -38,6 +43,10 @@ public class DisplayText : MonoBehaviour
 
     public void NextSentence()
     {
+        if (!inDialogue)
+        {
+            return;
+        }
         if (scrolling)
         {
             scrolling = false;
@@ -50,12 +59,17 @@ public class DisplayText : MonoBehaviour
         }
         else
         {
-            this.GetComponent<Player>().isInputAvailable = true;
             text.text = "";
             sentence = 0;
-            inDialogue = false;
             textView.Hide();
+            inDialogue = false;
+            StartCoroutine(allowInput());
         }
+    }
+    IEnumerator allowInput()
+    {
+        yield return new WaitForSeconds(0.7f);
+        this.GetComponent<Player>().isInputAvailable = true;
     }
 
     IEnumerator ScrollText()
@@ -74,6 +88,7 @@ public class DisplayText : MonoBehaviour
             displayText += character;
             text.text = displayText;
             yield return new WaitForSeconds(0.05f);
+            first = false;
         }
         scrolling = false;
         src.Stop();

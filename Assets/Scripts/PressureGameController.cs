@@ -39,7 +39,7 @@ public class PressureGameController : MonoBehaviour
     }
 
 
-    void Update()
+    void LateUpdate()
     {
         if (currentPressureValue != targetPressureValue)
         {
@@ -48,7 +48,6 @@ public class PressureGameController : MonoBehaviour
         }
 
         indicator.value = currentPressureValue;
-        src.pitch = 1 + currentPressureValue;
 
         if (currentPressureValue >= 0.65f)
         {
@@ -60,12 +59,14 @@ public class PressureGameController : MonoBehaviour
         }
 
         timeProgressor.SetValue(maxLoseTime - loseTimer);
+        src.pitch = 1 + timeProgressor.Value / maxLoseTime;
 
         //Lose
         if (loseTimer <= 0)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().PressureFailure();
             chooser.Stop();
+            src.Stop();
             this.enabled = false;
         }
 

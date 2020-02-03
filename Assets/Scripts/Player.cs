@@ -14,14 +14,17 @@ public class Player : MonoBehaviour
     public SaveState save;
     public AudioClip pressureLose;
     public AudioClip powerLose;
+    AudioManager AM;
 
     public bool isInputAvailable = true;
+    public bool levelChanging = false;
     public float MoveSpeed = 5;
     public float raycastDistance = 0.05f;
     public float horizontalDirection;
 
     void Start()
     {
+        AM = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         save = GameObject.FindGameObjectWithTag("SaveState").GetComponent<SaveState>();
         flashlight = GetComponentsInChildren<Light2D>()[1];
         anim = GetComponentInChildren<Animator>();
@@ -34,6 +37,7 @@ public class Player : MonoBehaviour
         if (isInputAvailable)
         {
             horizontalDirection = Input.GetAxis("Horizontal");
+            anim.SetBool("Flashlight", true);
             if (horizontalDirection != 0)
             {
                 flashlight.enabled = true;
@@ -50,14 +54,16 @@ public class Player : MonoBehaviour
             else
             {
                 anim.SetBool("Walk", false);
-                flashlight.enabled = false;
             }
         }
         else
         {
+            if (!levelChanging)
+            {
+                anim.SetBool("Flashlight", false);
+            }
             anim.SetBool("Walk", false);
             horizontalDirection = 0;
-            flashlight.enabled = false;
         }
     }
 
@@ -73,7 +79,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         Vector2 origin = new Vector2(transform.position.x, transform.position.y + 1f);
         Vector2 dir = new Vector2(horizontalDirection < 0 ? -1 : 1, 0);
@@ -106,19 +112,25 @@ public class Player : MonoBehaviour
 
     IEnumerator PressureRoutine()
     {
-        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlaySound(pressureLose, 1);
         transitionView.Show();
-        yield return new WaitForSeconds(4f);
+        AM.PlaySound(pressureLose, 1);
+        AM.GetComponents<AudioSource>()[0].Stop();
+        yield return new WaitForSeconds(pressureLose.length);
         save.Clear();
+        AudioManager.created = false;
+        Destroy(AM.gameObject);
         SceneManager.LoadScene("GameOpen");
     }
 
     IEnumerator PowerRoutine()
     {
         transitionView.Show();
-        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().PlaySound(powerLose, 1);
-        yield return new WaitForSeconds(33f);
+        AM.PlaySound(powerLose, 1);
+        AM.GetComponents<AudioSource>()[0].Stop();
+        yield return new WaitForSeconds(powerLose.length);
         save.Clear();
+        AudioManager.created = false;
+        Destroy(AM.gameObject);
         SceneManager.LoadScene("GameOpen");
     }
 }
