@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1089,8 +1089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workingColor: {r: 1, g: 0.909804, b: 0.29803923, a: 1}
   brokenColor: {r: 0, g: 0, b: 0, a: 1}
-  green: {fileID: 21300000, guid: 3367bc369141f7e4f9cff22c48d10b76, type: 3}
-  red: {fileID: 21300000, guid: ba9d2d212d869c144ae4830e5c15f0fe, type: 3}
+  workingSprite: {fileID: 21300000, guid: 3367bc369141f7e4f9cff22c48d10b76, type: 3}
+  brokenSprite: {fileID: 21300000, guid: ba9d2d212d869c144ae4830e5c15f0fe, type: 3}
 --- !u!212 &598933730
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3291,8 +3291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workingColor: {r: 1, g: 0.909804, b: 0.29803923, a: 1}
   brokenColor: {r: 0, g: 0, b: 0, a: 1}
-  green: {fileID: 21300000, guid: 3367bc369141f7e4f9cff22c48d10b76, type: 3}
-  red: {fileID: 21300000, guid: ba9d2d212d869c144ae4830e5c15f0fe, type: 3}
+  workingSprite: {fileID: 21300000, guid: 3367bc369141f7e4f9cff22c48d10b76, type: 3}
+  brokenSprite: {fileID: 21300000, guid: ba9d2d212d869c144ae4830e5c15f0fe, type: 3}
 --- !u!212 &1703142844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3423,9 +3423,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 487c910a497bb2c4a9ee4c5ef07b140d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.411
+  m_Volume: 0.586
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3433,10 +3433,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 0
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 12.5
+  MaxDistance: 13.5
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3444,23 +3444,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.9259259
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -1.0804318
+      outSlope: -1.0804318
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.323013
+      inSlope: -0.9262949
+      outSlope: -0.9262949
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -3469,7 +3469,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3499,7 +3499,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0

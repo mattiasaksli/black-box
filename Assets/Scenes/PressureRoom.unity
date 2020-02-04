@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6697,8 +6697,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workingColor: {r: 0, g: 1, b: 0, a: 1}
   brokenColor: {r: 1, g: 0, b: 0, a: 1}
-  green: {fileID: 21300000, guid: a3608865a938dd04da0516a9f39b0c15, type: 3}
-  red: {fileID: 21300000, guid: ddf3dad5689b61142a798ac082bdf20b, type: 3}
+  workingSprite: {fileID: 21300000, guid: a3608865a938dd04da0516a9f39b0c15, type: 3}
+  brokenSprite: {fileID: 21300000, guid: ddf3dad5689b61142a798ac082bdf20b, type: 3}
 --- !u!1 &1121053058
 GameObject:
   m_ObjectHideFlags: 0
@@ -8721,7 +8721,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2834666362296002718, guid: fec3ddcd168a6b34698d989ccd68bcce,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0cd5b5bce51d3db4b818fd96c34d7d63, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.201
   m_Pitch: 1
@@ -8731,8 +8731,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 0
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 11.9
+  MaxDistance: 15.61
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -8767,7 +8767,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0
