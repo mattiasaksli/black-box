@@ -115,10 +115,8 @@ public class Player : MonoBehaviour
         transitionView.Show();
         AM.PlaySound(pressureLose, 1);
         AM.GetComponents<AudioSource>()[0].Stop();
+        AM.GetComponents<AudioSource>()[1].Stop();
         yield return new WaitForSeconds(pressureLose.length);
-        save.Clear();
-        AudioManager.created = false;
-        Destroy(AM.gameObject);
         SceneManager.LoadScene("GameOpen");
     }
 
@@ -127,10 +125,8 @@ public class Player : MonoBehaviour
         transitionView.Show();
         AM.PlaySound(powerLose, 1);
         AM.GetComponents<AudioSource>()[0].Stop();
+        AM.GetComponents<AudioSource>()[1].Stop();
         yield return new WaitForSeconds(powerLose.length);
-        save.Clear();
-        AudioManager.created = false;
-        Destroy(AM.gameObject);
         SceneManager.LoadScene("GameOpen");
     }
 }

@@ -58,6 +58,10 @@ public class SaveState : MonoBehaviour
 
     private void OnSceneLoaded(Scene s, LoadSceneMode m)
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Clear();
+        }
         if (s.buildIndex == 1 && startRoomSpawnPos != null)
         {
             player = GameObject.FindGameObjectWithTag("Player");

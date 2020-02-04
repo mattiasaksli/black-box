@@ -9,7 +9,6 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup output;
     public AudioClip[] stepSounds;
     public List<AudioSource> sources;
-    public AudioClip ambient;
 
     public static bool created;
     int lastStep;
@@ -35,6 +34,21 @@ public class AudioManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    void OnLevelWasLoaded(int level)
+    {
+        AudioSource ambient = GetComponents<AudioSource>()[0];
+        AudioSource music = GetComponents<AudioSource>()[1];
+
+        if (!ambient.isPlaying)
+        {
+            ambient.Play();
+        }
+        if (!music.isPlaying)
+        {
+            music.Play();
         }
     }
 
