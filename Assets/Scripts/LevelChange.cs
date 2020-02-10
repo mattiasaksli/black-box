@@ -37,24 +37,37 @@ public class LevelChange : MonoBehaviour
                 }
             }
             label.Show();
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                if (touch.position.x > Screen.currentResolution.width * 0.4f && touch.position.x < Screen.currentResolution.width * 0.6f && touch.phase == TouchPhase.Began)
+                {
+                    Interact();
+                }
+            }
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (sceneToLoad.Equals("PressureRoom"))
-                {
-                    save.startRoomSpawnPos = new Vector3(transform.position.x, 0, 0);
-                }
-                else if (sceneToLoad.Equals("PowerRoom") || sceneToLoad.Equals("LifeSupport"))
-                {
-                    save.coreRoomSpawnPos = new Vector3(transform.position.x, 0, 0);
-                }
-                label.Hide();
-                StartCoroutine(LevelTransition());
+                Interact();
             }
         }
         else
         {
             label.Hide();
         }
+    }
+
+    public void Interact()
+    {
+        if (sceneToLoad.Equals("PressureRoom"))
+        {
+            save.startRoomSpawnPos = new Vector3(transform.position.x, 0, 0);
+        }
+        else if (sceneToLoad.Equals("PowerRoom") || sceneToLoad.Equals("LifeSupport"))
+        {
+            save.coreRoomSpawnPos = new Vector3(transform.position.x, 0, 0);
+        }
+        label.Hide();
+        StartCoroutine(LevelTransition());
     }
 
     IEnumerator LevelTransition()

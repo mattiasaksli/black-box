@@ -29,16 +29,28 @@ public class Status : MonoBehaviour
                 }
             }
             label.Show();
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                if (touch.position.x > Screen.currentResolution.width * 0.4f && touch.position.x < Screen.currentResolution.width * 0.6f && touch.phase == TouchPhase.Began)
+                {
+                    Interact();
+                }
+            }
             if (Input.GetKeyDown(KeyCode.F))
             {
-                GameEventMessage.SendEvent("Interacting");
-                player.GetComponent<Player>().isInputAvailable = false;
-                label.Hide();
+                Interact();
             }
         }
         else
         {
             label.Hide();
         }
+    }
+    void Interact()
+    {
+        GameEventMessage.SendEvent("Interacting");
+        player.GetComponent<Player>().isInputAvailable = false;
+        label.Hide();
     }
 }

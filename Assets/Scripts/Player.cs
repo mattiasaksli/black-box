@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float MoveSpeed = 5;
     public float raycastDistance = 0.05f;
     public float horizontalDirection;
+    bool mobile = false;
 
     void Start()
     {
@@ -30,14 +31,41 @@ public class Player : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         transitionView = GameObject.Find("View - Transition").GetComponent<UIView>();
         transitionView.Hide();
+        if (Application.isMobilePlatform)
+        {
+            mobile = true;
+        }
     }
 
     void Update()
     {
         if (isInputAvailable)
         {
-            horizontalDirection = Input.GetAxis("Horizontal");
             anim.SetBool("Flashlight", true);
+            if (mobile)
+            {
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+                    if (touch.position.x > Screen.currentResolution.width * 0.6f)
+                    {
+                        horizontalDirection = 1;
+                    }
+                    else if (touch.position.x < Screen.currentResolution.width * 0.4f)
+                    {
+                        horizontalDirection = -1;
+                    }
+                }
+                else
+                {
+                    horizontalDirection = 0;
+                }
+            }
+            else
+            {
+                horizontalDirection = Input.GetAxis("Horizontal");
+            }
+
             if (horizontalDirection != 0)
             {
                 flashlight.enabled = true;
