@@ -1,5 +1,5 @@
-﻿using Doozy.Engine.UI;
-using System.Collections;
+﻿using System.Collections;
+using Doozy.Engine.UI;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class DisplayText : MonoBehaviour
     public int sentence;
     public bool scrolling;
     public TMP_Text text;
-    public bool inDialogue = false;
+    public bool inDialogue;
     public bool first = true;
 
     public AudioSource src;
@@ -25,7 +25,7 @@ public class DisplayText : MonoBehaviour
         if (!inDialogue)
         {
             first = true;
-            this.GetComponent<Player>().isInputAvailable = false;
+            GetComponent<Player>().isInputAvailable = false;
             inDialogue = true;
             textView.Show();
             sentence = 0;
@@ -63,13 +63,13 @@ public class DisplayText : MonoBehaviour
             sentence = 0;
             textView.Hide();
             inDialogue = false;
-            StartCoroutine(allowInput());
+            StartCoroutine(AllowInput());
         }
     }
-    IEnumerator allowInput()
+    IEnumerator AllowInput()
     {
         yield return new WaitForSeconds(0.7f);
-        this.GetComponent<Player>().isInputAvailable = true;
+        GetComponent<Player>().isInputAvailable = true;
     }
 
     IEnumerator ScrollText()

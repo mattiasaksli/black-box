@@ -10,14 +10,14 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] stepSounds;
     public List<AudioSource> sources;
 
-    public static bool created;
-    int lastStep;
+    private static bool created;
+    private int lastStep;
 
     void Start()
     {
         if (!created)
         {
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
             created = true;
 
             for (int i = 0; i < 7; i++)
@@ -33,22 +33,7 @@ public class AudioManager : MonoBehaviour
 
         else
         {
-            Destroy(this.gameObject);
-        }
-    }
-
-    void OnLevelWasLoaded(int level)
-    {
-        AudioSource ambient = GetComponents<AudioSource>()[0];
-        AudioSource music = GetComponents<AudioSource>()[1];
-
-        if (!ambient.isPlaying)
-        {
-            ambient.Play();
-        }
-        if (!music.isPlaying)
-        {
-            music.Play();
+            Destroy(gameObject);
         }
     }
 
@@ -68,6 +53,7 @@ public class AudioManager : MonoBehaviour
                         break;
                     }
                 }
+
                 sc.volume = footstepVolume;
                 sc.clip = stepSounds[step];
                 sc.Play();

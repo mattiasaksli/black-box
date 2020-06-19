@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class LightsOutButton : MonoBehaviour
 {
     public List<LightsOutButton> neighbors;
-    public bool isOn = false;
+    public bool isOn;
     public Color offColor = new Color(0.9f, 0, 0);
     public Color onColor = new Color(0, 0, 0.9f);
     public Button b;
