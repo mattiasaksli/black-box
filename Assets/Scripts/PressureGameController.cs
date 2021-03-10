@@ -23,6 +23,7 @@ public class PressureGameController : MonoBehaviour
     public float lerpTime = 1f;
     public float loseTimer;
     public float maxLoseTime;
+    private bool won;
 
     void Start()
     {
@@ -41,6 +42,9 @@ public class PressureGameController : MonoBehaviour
 
     void LateUpdate()
     {
+        if (won) {
+            return;
+        }
         if (currentPressureValue != targetPressureValue)
         {
             currentPressureValue = Mathf.Lerp(currentPressureValue, targetPressureValue, (1 / lerpTime) * Time.deltaTime);
@@ -75,6 +79,7 @@ public class PressureGameController : MonoBehaviour
         {
             GameEventMessage.SendEvent("GameWon");
             StartCoroutine(GameWon());
+            won = true;
         }
     }
 

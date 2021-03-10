@@ -15,6 +15,6 @@ public class CallFootstep : MonoBehaviour
     }
     public void PlayFlash()
     {
-        AM.PlaySound(flashlightClip, 1f);
+        AM.PlaySound(flashlightClip, 0.5f);
     }
 }

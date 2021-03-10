@@ -80,3 +80,4 @@ crashlytics-build.properties
 # Editor-based HTTP Client requests
 /httpRequests/
 
+*.keystore

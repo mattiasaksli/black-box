@@ -3,8 +3,7 @@ using Doozy.Engine.UI;
 using TMPro;
 using UnityEngine;
 
-public class DisplayText : MonoBehaviour
-{
+public class DisplayText : MonoBehaviour {
     public UIView textView;
     public string[] sentences;
     public int sentence;
@@ -15,15 +14,12 @@ public class DisplayText : MonoBehaviour
 
     public AudioSource src;
 
-    void Start()
-    {
+    void Start() {
         src = GetComponent<AudioSource>();
     }
 
-    public void StartDisplay()
-    {
-        if (!inDialogue)
-        {
+    public void StartDisplay() {
+        if (!inDialogue) {
             first = true;
             GetComponent<Player>().isInputAvailable = false;
             inDialogue = true;
@@ -33,32 +29,35 @@ public class DisplayText : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (inDialogue && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F)) && !first)
-        {
-            NextSentence();
+    void Update() {
+        if (inDialogue && !first) {
+            bool tapped = false;
+            if (Input.touchCount > 0) {
+                if (Input.GetTouch(0).phase.Equals(TouchPhase.Began)) {
+                    tapped = true;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F) || tapped) {
+                NextSentence();
+            }
         }
     }
 
-    public void NextSentence()
-    {
-        if (!inDialogue)
-        {
+    public void NextSentence() {
+        if (!inDialogue) {
             return;
         }
-        if (scrolling)
-        {
+
+        if (scrolling) {
             scrolling = false;
             return;
         }
+
         sentence += 1;
-        if (sentence < sentences.Length)
-        {
+        if (sentence < sentences.Length) {
             StartCoroutine(ScrollText());
         }
-        else
-        {
+        else {
             text.text = "";
             sentence = 0;
             textView.Hide();
@@ -66,30 +65,29 @@ public class DisplayText : MonoBehaviour
             StartCoroutine(AllowInput());
         }
     }
-    IEnumerator AllowInput()
-    {
+
+    IEnumerator AllowInput() {
         yield return new WaitForSeconds(0.7f);
         GetComponent<Player>().isInputAvailable = true;
     }
 
-    IEnumerator ScrollText()
-    {
+    IEnumerator ScrollText() {
         scrolling = true;
         src.Play();
         string displayText = "";
-        foreach (char character in sentences[sentence])
-        {
-            if (!scrolling)
-            {
+        foreach (char character in sentences[sentence]) {
+            if (!scrolling) {
                 displayText = sentences[sentence];
                 text.text = displayText;
                 break;
             }
+
             displayText += character;
             text.text = displayText;
             yield return new WaitForSeconds(0.05f);
             first = false;
         }
+
         scrolling = false;
         src.Stop();
     }

@@ -131,30 +131,20 @@ public class Player : MonoBehaviour
     //Death states
     public void PressureFailure()
     {
-        StartCoroutine(PressureRoutine());
+        StartCoroutine(DeathFail(pressureLose));
     }
     public void PowerFailure()
     {
-        StartCoroutine(PowerRoutine());
+        StartCoroutine(DeathFail(powerLose));
     }
 
-    IEnumerator PressureRoutine()
+    IEnumerator DeathFail(AudioClip clip)
     {
         transitionView.Show();
-        AM.PlaySound(pressureLose, 1);
-        AM.GetComponents<AudioSource>()[0].Stop();
-        AM.GetComponents<AudioSource>()[1].Stop();
-        yield return new WaitForSeconds(pressureLose.length);
-        SceneManager.LoadScene("GameOpen");
-    }
-
-    IEnumerator PowerRoutine()
-    {
-        transitionView.Show();
-        AM.PlaySound(powerLose, 1);
-        AM.GetComponents<AudioSource>()[0].Stop();
-        AM.GetComponents<AudioSource>()[1].Stop();
-        yield return new WaitForSeconds(powerLose.length);
+        AM.PlaySound(clip, 1);
+        AM.ambientSounds[0].Stop();
+        AM.ambientSounds[1].Stop();
+        yield return new WaitForSeconds(clip.length);
         SceneManager.LoadScene("GameOpen");
     }
 }

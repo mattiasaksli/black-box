@@ -218,6 +218,9 @@ namespace Doozy.Engine.Soundy
             InUse = true;
             IsPaused = false;
             m_isPlaying = true;
+            AudioSource.reverbZoneMix = 0;
+            AudioSource.dopplerLevel = 0;
+            AudioSource.spatialBlend = 0;
             AudioSource.Play();
             if (DebugComponent) DDebug.Log("Play '" + name + "' SoundyController", this);
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,17 +10,25 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup output;
     public AudioClip[] stepSounds;
     public List<AudioSource> sources;
+    public List<AudioSource> ambientSounds;
 
     private static bool created;
     private int lastStep;
 
-    void Start()
-    {
+    void Start() {
         if (!created)
         {
             DontDestroyOnLoad(gameObject);
             created = true;
 
+            ambientSounds = new List<AudioSource>(GetComponents<AudioSource>());
+            SceneManager.sceneLoaded += (scene, mode) => {
+                foreach (var ambientSound in ambientSounds) {
+                    if (!ambientSound.isPlaying) {
+                        ambientSound.Play();
+                    }
+                }
+            }; 
             for (int i = 0; i < 7; i++)
             {
                 AudioSource s = gameObject.AddComponent<AudioSource>();

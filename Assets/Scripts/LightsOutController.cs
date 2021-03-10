@@ -10,6 +10,7 @@ public class LightsOutController : MonoBehaviour
     public AudioSource buttonSrc;
     public AudioClip winClip;
     public ChooseAudio chooser;
+    private bool over;
 
     void Start()
     {
@@ -22,12 +23,16 @@ public class LightsOutController : MonoBehaviour
 
     void Update()
     {
-        buttons = GetComponentsInChildren<LightsOutButton>();
-
+        if (over) {
+            return;
+        }
+        
         bool currentlyAllOn = true;
+        bool currentlyAllOff = true;
         foreach (LightsOutButton b in buttons)
         {
             currentlyAllOn = currentlyAllOn && b.isOn;
+            currentlyAllOff = currentlyAllOff && !b.isOn;
         }
 
         //Win
@@ -37,12 +42,7 @@ public class LightsOutController : MonoBehaviour
             buttonSrc.Play();
 
             StartCoroutine(GameWon());
-        }
-
-        bool currentlyAllOff = true;
-        foreach (LightsOutButton b in buttons)
-        {
-            currentlyAllOff = currentlyAllOff && !b.isOn;
+            over = true;
         }
 
         //Lose
@@ -50,7 +50,8 @@ public class LightsOutController : MonoBehaviour
         {
             player.GetComponent<Player>().PowerFailure();
             chooser.Stop();
-            this.enabled = false;
+            over = true;
+            enabled = false;
         }
     }
 

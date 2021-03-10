@@ -17,7 +17,7 @@ MonoBehaviour:
   KeyCode: 13
   KeyCodeAlt: 32
   ClickMode: 0
-  AllowMultipleClicks: 1
+  AllowMultipleClicks: 0
   DeselectButtonAfterClick: 0
   EnableAlternateInputs: 1
   ShowNormalLoopAnimation: 1

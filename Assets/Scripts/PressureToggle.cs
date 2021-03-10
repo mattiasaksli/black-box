@@ -3,8 +3,7 @@ using UnityEngine.UI;
 
 public class PressureToggle : MonoBehaviour
 {
-    [SerializeField]
-    private float pressureValue;
+    [SerializeField] private float pressureValue;
     public float currentValue;
     public Toggle toggle;
     public PressureGameController controller;

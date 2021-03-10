@@ -15,7 +15,7 @@ MonoBehaviour:
   InputMode: 2
   KeyCode: 13
   KeyCodeAlt: 32
-  AllowMultipleClicks: 1
+  AllowMultipleClicks: 0
   DeselectButtonAfterClick: 0
   EnableAlternateInputs: 1
   ShowOnButtonDeselected: 1
